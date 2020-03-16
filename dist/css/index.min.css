@@ -2,8 +2,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
 body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}.wrapper{max-width:1140px;margin:0 auto}
-.header{padding:13px 0 11px;background-color:#0c3a4c}.header-content{display:flex;justify-content:space-between;padding:0 6px}
-.header-item{text-decoration:none;text-transform:uppercase;font-family:"Fira Sans Condensed";color:#74929e;transition:.3s ease-in-out}
+.header{padding:13px 0 11px;background-color:#0c3a4c;position:sticky;top:0;z-index:999}
+.header-content{display:flex;justify-content:space-between;padding:0 6px}.header-item{text-decoration:none;text-transform:uppercase;font-family:"Fira Sans Condensed";color:#74929e;transition:.3s ease-in-out}
 .header-item:hover{transition:.3s ease-in-out;color:#20a9e1}.hero{padding:20px 0 69px;background:center/cover no-repeat url("../img/bgHero.png")}
 .hero_top-content{display:flex;justify-content:space-between;font-family:"Raleway"}
 .hero_top-content_item{display:flex;align-items:center}.hero_logo{width:68px;height:65px;background:#000;margin-right:29px}
@@ -15,10 +15,29 @@ table{border-collapse:collapse;border-spacing:0}.wrapper{max-width:1140px;margin
 .hero_contacts-container_info{color:#fff;font-size:14px}.hero_contacts-container_phone{font-family:"Fira Sans Condensed";font-size:30px;color:#fff;margin:6px 0 5px}
 .hero_order{text-decoration:none;color:#10a0db;font-size:14px;border-bottom:1px solid rgba(253,77,79,0.5);padding-bottom:4px}
 .hero_title{margin-top:71px;font-family:"Fira Sans Condensed";font-size:48px;font-weight:500;color:#fff;text-align:center}
-.hero_subtitle{margin:34px 0;font-family:"Raleway";color:#fff;font-size:24px;text-align:center;font-weight:400}
+.hero_subtitle{position:relative;margin-top:34px;padding-bottom:34px;line-height:30px;font-family:"Raleway";color:#fff;font-size:24px;text-align:center;font-weight:400}
+.hero_subtitle:after{content:'';position:absolute;background-color:#fff;height:1px;width:67px;left:47%;bottom:0}
 .hero_advantages-main-container{font-family:"Raleway"}.hero_advantages-container{display:flex}
 .hero_advantages-container:first-of-type{padding:37px 17px 18px;border-bottom:1px solid rgba(232,232,232,0.1)}
 .hero_advantages-container:last-of-type{padding:18px 17px 0}.hero_advantages-item{display:flex;align-items:center;flex-grow:1;max-width:25%}
-.hero_advantages-item span{margin-left:18px;color:#fff}.btn{position:relative;box-shadow:inset 0 -1px 0 #fd6264;border-radius:4px;background-image:linear-gradient(to top,#fd4d4f 0,#fd8687 100%);color:#fff;font-family:"Fira Sans Condensed";text-transform:uppercase;text-shadow:0 1px 0 #d94244;border:0;padding:29px 42px;margin:50px auto 0;font-size:16px;display:block}
-.btn:after{content:'';width:100%;height:6px;box-shadow:0 3px 27px 1px rgba(253,105,107,0.52);border-radius:14px;background-color:#aa3435;position:absolute;left:0;bottom:-3px}
-.bottom_info{margin-top:19px;text-align:center}
+.hero_advantages-item span{line-height:21px;margin-left:18px;color:#fff}.btn_container{z-index:1;text-align:center;position:relative}
+.btn{position:relative;box-shadow:inset 0 -1px 0 #fd6264;border-radius:4px;background-image:linear-gradient(to top,#fd4d4f 0,#fd8687 100%);color:#fff;font-family:"Fira Sans Condensed";text-transform:uppercase;text-shadow:0 1px 0 #d94244;border:0;padding:29px 42px;margin-top:50px;font-size:16px}
+.btn:after{content:'';width:100%;height:100%;box-shadow:0 3px 27px 1px rgba(253,105,107,0.52);border-radius:14px;background-color:#aa3435;position:absolute;left:0;bottom:-6px;z-index:-1}
+.bottom_info{margin-top:19px;text-align:center}.bottom_info span{font-family:"Raleway"}
+.quiz{padding:68px 0 73px}.quiz_content{background:url(../img/quiz/accounting_services_.png) no-repeat left,url(../img/quiz/accounting_servicesR.png) no-repeat right}
+.quiz_answers-container{display:flex;flex-wrap:wrap}.quiz_answer{font-family:"Raleway";margin-left:19px;border-bottom:1px solid rgba(16,160,219,0.2);padding-bottom:2px;color:#24ace3;transition:.3s ease-in-out}
+.quiz_answer-item{display:flex;align-items:center;margin-right:29px;margin-bottom:18px;padding:18px 87px 17px 31px;transition:.3s ease-in-out;border-radius:4px;background-color:#f9f9f9;border:1px solid #f9f9f9;max-width:30%;flex-grow:1}
+.quiz_answer-item:hover{box-shadow:0 3px 18px 3px rgba(253,105,107,0.14);border:1px solid #fdadae;transition:.3s ease-in-out;background-color:#fff}
+.quiz_answer-item:hover .quiz_answer-item_icon{fill:#fd4d4f;transition:.3s ease-in-out}
+.quiz_answer-item:hover .quiz_answer{color:#777;border-bottom:1px solid rgba(253,77,79,0.5);transition:.3s ease-in-out}
+.quiz_answer-item:nth-child(2n){margin-right:0}.quiz_answer-item_icon{fill:#c5c5c5;transition:.3s ease-in-out}
+.quiz_main-container{padding:10px 12px;margin:35px auto 0;max-width:854px;background:#fff;box-shadow:0 5px 33px 2px rgba(0,0,0,0.03);border:1px solid #f9f9f9}
+.quiz_item{border:1px solid #f0f0f0;border-radius:4px;padding:51px 108px 40px 99px}
+.quiz_number{text-align:center;font-family:"Raleway";color:#7a7a7a;font-size:12px;font-weight:500;margin-bottom:34px}
+.quiz_progress{position:relative;max-width:100%;width:100%;height:4px;background-color:#f9f9f9}
+.quiz_progress span{position:absolute;left:0;max-width:25%;width:100%;height:4px;background-color:#fd4d4f}
+.quiz_title{color:#505050;font-size:24px;font-family:"Raleway";text-align:center;padding:33px 0 35px}
+.quiz_btn{text-align:left}.quiz_btn button{padding:25px 85px 27px;margin-left:5px;margin-right:29px}
+.quiz_previous-question{font-family:"Raleway";opacity:.5;color:#505050;border-bottom:1px solid rgba(80,80,80,0.1)}
+.title{text-align:center;position:relative;padding-bottom:29px;color:#505050;font-family:"Fira Sans Condensed";font-size:36px;font-weight:500}
+.title:after{content:'';position:absolute;background-color:#505050;height:1px;width:67px;left:47%;bottom:0}

@@ -82,13 +82,24 @@
       text-align: center
 
    &_subtitle 
-      margin: 34px 0
-
+      position: relative
+      margin-top: 34px 
+      padding-bottom: 34px
+      line-height: 30px
       font-family: $second_font
       color: #ffffff
       font-size: 24px
       text-align: center
       font-weight: 400
+
+      &:after
+         content: ''
+         position: absolute
+         background-color: #ffffff
+         height: 1px
+         width: 67px
+         left: 47%
+         bottom: 0
 
 
    &_advantages-main-container 
@@ -110,8 +121,14 @@
       flex-grow: 1
       max-width: 25%
       span 
+         line-height: 21px
          margin-left: 18px
          color: #fff
+
+.btn_container
+   z-index: 1
+   text-align: center
+   position: relative
 
 .btn
    position: relative
@@ -124,25 +141,29 @@
    text-shadow: 0 1px 0 #d94244
    border: none
    padding: 29px 42px
-   margin: 50px auto 0
+   margin-top: 50px 
    font-size: 16px
-   display: block
+
 
    &:after
       content: ''
       width: 100%
-      height: 6px
+      height: 100%
       box-shadow: 0 3px 27px 1px rgba(253, 105, 107, 0.52)
       border-radius: 14px  
       background-color: #aa3435
       position: absolute
       left: 0
-      bottom: -3px
+      bottom: -6px
+      z-index: -1
 
 
 .bottom_info 
    margin-top: 19px
    text-align: center
+   
+   span 
+      font-family: $second_font
       
 
    
