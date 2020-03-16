@@ -1,0 +1,33 @@
+@font-face {
+   font-family: 'Fira Sans Condensed';
+   src: url(../fonts/Fira_Sans_Condensed/FiraSansCondensed-Regular.ttf)
+      format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Fira Sans Condensed';
+   src: url(../fonts/Fira_Sans_Condensed/FiraSansCondensed-Bold.ttf)
+      format('truetype');
+   font-weight: bold;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Raleway';
+   src: url('../fonts/raleway/ralewayregular.ttf') format('truetype');
+   src: url('../fonts/raleway/ralewayregular.ttf') format('woff');
+   src: url('../fonts/raleway/ralewayregular.woff2') format('woff2');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Raleway';
+   src: url('../fonts/raleway/ralewaybold.ttf') format('truetype');
+   src: url('../fonts/raleway/ralewaybold.woff') format('woff');
+   src: url('../fonts/raleway/ralewaybold.woff2') format('woff2');
+   font-weight: bold;
+   font-style: normal;
+}

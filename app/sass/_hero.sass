@@ -1,0 +1,49 @@
+@import 'variables'
+   
+.hero 
+   padding: 20px 0 69px
+   background: center / cover no-repeat url('../img/bgHero.png')
+
+   &_top-content 
+      display: flex
+      justify-content: space-between
+      font-family: $second_font 
+
+      &_item 
+         display: flex
+         align-items: center
+
+   &_logo 
+      width: 68px
+      height: 65px
+      background: #000
+      margin-right: 29px
+
+   &_info 
+      color: #ffffff
+      opacity: 0.5
+
+
+   &_social-network 
+      margin-right: 19px
+
+      svg 
+         width: 30px
+         height: 30px
+         opacity: 0.35
+
+
+      &:last-of-type 
+         margin-right: 0
+
+         svg
+            width: 35px
+
+      &:first-of-type 
+         margin-right: 17px
+         svg
+            width: 35px
+
+      &:hover 
+         svg
+            opacity: 1
