@@ -136,24 +136,40 @@
 
 .chech_item_title { color: #505050; font-size: 18px; line-height: 27px; text-transform: uppercase; font-family: "Fira Sans Condensed"; }
 
-.chech_previous-button, .chech_next-button { position: absolute; box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.11); background-color: #ffffff; width: 50px; height: 50px; border-radius: 50%; transition: .3s ease-in-out; border: none; top: 44%; outline: none; }
+.subtitle { margin-top: 36px; text-align: center; font-family: "Raleway"; font-size: 24px; color: #ffffff; }
 
-.chech_previous-button svg, .chech_next-button svg { width: 30px; height: 30px; transition: .3s ease-in-out; }
+.previous-button, .next-button { position: absolute; box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.11); background-color: #ffffff; width: 50px; height: 50px; border-radius: 50%; transition: .3s ease-in-out; border: none; top: 44%; outline: none; }
 
-.chech_previous-button:hover, .chech_next-button:hover { background-color: #24abe2; transition: .3s ease-in-out; }
+.previous-button svg, .next-button svg { width: 30px; height: 30px; transition: .3s ease-in-out; }
 
-.chech_previous-button:hover svg, .chech_next-button:hover svg { fill: #fff; transition: .3s ease-in-out; }
+.previous-button:hover, .next-button:hover { background-color: #24abe2; transition: .3s ease-in-out; }
 
-.chech_previous-button { transform: rotate(0.5turn); left: -25px; }
+.previous-button:hover svg, .next-button:hover svg { fill: #fff; transition: .3s ease-in-out; }
 
-.chech_next-button { right: -25px; }
+.previous-button { transform: rotate(0.5turn); left: -25px; }
 
-.chech_subtitle { margin-top: 36px; text-align: center; font-family: "Raleway"; font-size: 24px; color: #ffffff; }
+.next-button { right: -25px; }
 
 .slider-dots { display: flex; justify-content: center; margin-top: 34px; }
 
 .slider-dots li { max-width: 155px; width: 100%; }
 
-.slider-dots li button { width: inherit; outline: none; border: none; height: 4px; background-color: #f9f9f9; }
+.slider-dots li button { width: inherit; outline: none; border: none; height: 4px; color: transparent; background-color: #f9f9f9; }
 
 .slider-dots li.slick-active button { background-color: #fd4d4f; }
+
+.beauty { padding: 69px 0 75px; }
+
+.beauty_title:after { background-color: #10a0db; }
+
+.beauty_main-container { margin-top: 35px; position: relative; }
+
+.beauty_previous-button { left: 170px; }
+
+.beauty_next-button { right: 170px; }
+
+.beauty .subtitle { color: #505050; }
+
+.beauty_slide { outline: none; }
+
+.beauty_slide img { margin: 0 auto; }
