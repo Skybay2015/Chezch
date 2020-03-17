@@ -1,0 +1,84 @@
+@import 'variables'
+
+.reviews
+   padding: 69px 0 74px
+   background: center/cover  no-repeat  url('../img/reviews/bg.png') 
+
+   .title 
+      color: #ffffff
+
+      &:after 
+         content: none
+
+   &_main-container
+      position: relative
+      margin-top: 34px
+
+
+   &_slide_photo-container 
+      width: 166px
+      height: 158px
+      text-align: center
+      border-radius: 50%
+      border-top: 1px solid #fd4d4f
+      padding: 9px
+      margin-right: 23px
+
+   &_slide_photo 
+      position: relative
+      border-radius: 50%
+      border-right: 1px solid #fd4d4f
+      padding: 21px
+
+      &_img
+         border-radius: 50%
+         box-shadow: 0 0 27px 8px rgba(253, 105, 107, 0.52)
+
+   &_slide_icon 
+      position: absolute
+      right: -15px
+      top: calc(50%  - 27px)
+      width: 45px
+      height: 45px
+
+   &_slide_container 
+      display: flex
+      margin-bottom: 31px
+      
+      &:nth-of-type(2n) 
+         margin-bottom: 0
+
+   &_slide_item 
+      display: flex
+      flex-grow: 1
+      align-items: center
+      justify-content: center
+
+
+   &_slide_info 
+      color: #ffffff
+      opacity: .35
+      font-family: $first_font
+      border-bottom: 1px solid rgba(253, 77, 79, .4)
+      line-height: 21px
+
+.second_subtitle
+      position: relative
+      max-width: 717px
+      width: 100%
+      margin: 5px auto 0
+      color: #d3d3d3
+      font-family: $second_font
+      font-size: 20px
+      line-height: 30px
+      text-align: center
+      padding-bottom: 35px
+
+      &:after 
+         content: ''
+         position: absolute
+         background-color: #10a0db
+         height: 1px
+         width: 67px
+         left: 47%
+         bottom: 0

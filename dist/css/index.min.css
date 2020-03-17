@@ -13,11 +13,11 @@ table{border-collapse:collapse;border-spacing:0}.slick-slider{position:relative;
 .slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}
 .slick-arrow.slick-hidden{display:none}.wrapper{max-width:1140px;margin:0 auto}.header{padding:13px 0 11px;background-color:#0c3a4c;position:sticky;top:0;z-index:999}
 .header-content{display:flex;justify-content:space-between;padding:0 6px}.header-item{text-decoration:none;text-transform:uppercase;font-family:"Fira Sans Condensed";color:#74929e;transition:.3s ease-in-out}
-.header-item:hover{transition:.3s ease-in-out;color:#20a9e1}.hero{padding:20px 0 69px;background:center/cover no-repeat url("../img/bgHero.png")}
+.header-item:hover{transition:.3s ease-in-out;color:#20a9e1}.hero{padding:20px 0 69px;background:center/cover no-repeat url("../img/hero/bgHero.png")}
 .hero_top-content{display:flex;justify-content:space-between;font-family:"Raleway"}
 .hero_top-content_item{display:flex;align-items:center}.hero_logo{width:68px;height:65px;background:#000;margin-right:29px}
 .hero_info{color:#fff;opacity:.5;font-size:14px;line-height:21px}.hero_social-network-container{margin-right:26px}
-.hero_social-network{margin-right:19px}.hero_social-network svg{width:30px;height:30px;opacity:.35}
+.hero_social-network{margin-right:19px;color:transparent}.hero_social-network svg{width:30px;height:30px;opacity:.35}
 .hero_social-network:last-of-type{margin-right:0}.hero_social-network:last-of-type svg{width:35px}
 .hero_social-network:first-of-type{margin-right:17px}.hero_social-network:first-of-type svg{width:35px}
 .hero_social-network:hover svg{opacity:1}.hero_contacts-container{text-align:right}
@@ -50,14 +50,14 @@ table{border-collapse:collapse;border-spacing:0}.slick-slider{position:relative;
 .quiz_previous-question{font-family:"Raleway";opacity:.5;color:#505050;border-bottom:1px solid rgba(80,80,80,0.1)}
 .title{text-align:center;position:relative;padding-bottom:29px;color:#505050;font-family:"Fira Sans Condensed";font-size:36px;font-weight:500}
 .title:after{content:'';position:absolute;background-color:#505050;height:1px;width:67px;left:47%;bottom:0}
-.title:nth-of-type(even){color:#fff}.chech{background:center/cover no-repeat url("../img/bgHero.png");padding:69px 0 75px}
+.title:nth-of-type(even){color:#fff}.chech{background:center/cover no-repeat url("../img/hero/bgHero.png");padding:69px 0 75px}
 .chech .title:after{background-color:#fff}.chech_main-container{margin-top:35px;position:relative}
 .chech_container{display:flex}.chech_item{height:383px;padding:37px 37px 37px 30px;background-color:#fff;margin-right:5px}
 .chech_item:last-of-type{margin-right:0}.chech_item_info{font-family:"Raleway";color:#7a7a7a;font-size:14px;line-height:24px}
 .chech_item_title-container{display:flex;align-items:center;margin-bottom:22px}.chech_item_title{margin-left:17px}
 .chech_item_img{width:60px;height:60px}.chech_item_title{color:#505050;font-size:18px;line-height:27px;text-transform:uppercase;font-family:"Fira Sans Condensed"}
 .subtitle{margin-top:36px;text-align:center;font-family:"Raleway";font-size:24px;color:#fff}
-.previous-button,.next-button{position:absolute;box-shadow:2px 3px 7px rgba(0,0,0,0.11);background-color:#fff;width:50px;height:50px;border-radius:50%;transition:.3s ease-in-out;border:0;top:44%;outline:0}
+.previous-button,.next-button{position:absolute;box-shadow:2px 3px 7px rgba(0,0,0,0.11);background-color:#fff;width:50px;height:50px;border-radius:50%;transition:.3s ease-in-out;border:0;top:37%;outline:0}
 .previous-button svg,.next-button svg{width:30px;height:30px;transition:.3s ease-in-out}
 .previous-button:hover,.next-button:hover{background-color:#24abe2;transition:.3s ease-in-out}
 .previous-button:hover svg,.next-button:hover svg{fill:#fff;transition:.3s ease-in-out}
@@ -66,4 +66,16 @@ table{border-collapse:collapse;border-spacing:0}.slick-slider{position:relative;
 .slider-dots li.slick-active button{background-color:#fd4d4f}.beauty{padding:69px 0 75px}
 .beauty_title:after{background-color:#10a0db}.beauty_main-container{margin-top:35px;position:relative}
 .beauty_previous-button{left:170px}.beauty_next-button{right:170px}.beauty .subtitle{color:#505050}
-.beauty_slide{outline:0}.beauty_slide img{margin:0 auto}
+.beauty_slide{outline:0}.beauty_slide img{margin:0 auto}.reviews{padding:69px 0 74px;background:center/cover no-repeat url("../img/reviews/bg.png")}
+.reviews .title{color:#fff}.reviews .title:after{content:none}.reviews_main-container{position:relative;margin-top:34px}
+.reviews_slide_photo-container{width:166px;height:158px;text-align:center;border-radius:50%;border-top:1px solid #fd4d4f;padding:9px;margin-right:23px}
+.reviews_slide_photo{position:relative;border-radius:50%;border-right:1px solid #fd4d4f;padding:21px}
+.reviews_slide_photo_img{border-radius:50%;box-shadow:0 0 27px 8px rgba(253,105,107,0.52)}
+.reviews_slide_icon{position:absolute;right:-15px;top:calc(50% - 27px);width:45px;height:45px}
+.reviews_slide_container{display:flex;margin-bottom:31px}.reviews_slide_container:nth-of-type(2n){margin-bottom:0}
+.reviews_slide_item{display:flex;flex-grow:1;align-items:center;justify-content:center}
+.reviews_slide_info{color:#fff;opacity:.35;font-family:"Fira Sans Condensed";border-bottom:1px solid rgba(253,77,79,0.4);line-height:21px}
+.second_subtitle{position:relative;max-width:717px;width:100%;margin:5px auto 0;color:#d3d3d3;font-family:"Raleway";font-size:20px;line-height:30px;text-align:center;padding-bottom:35px}
+.second_subtitle:after{content:'';position:absolute;background-color:#10a0db;height:1px;width:67px;left:47%;bottom:0}
+.vantage{padding:69px 0 75px}.vantage .title:after{content:none}.vantage .second_subtitle{color:#7a7a7a}
+.vantage_main-container{padding:35px 0 35px 54px;background:no-repeat center/cover url(../img/vantage/bg.png)}

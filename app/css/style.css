@@ -8,7 +8,7 @@
 
 .header-item:hover { transition: .3s ease-in-out; color: #20a9e1; }
 
-.hero { padding: 20px 0 69px; background: center/cover no-repeat url("../img/bgHero.png"); }
+.hero { padding: 20px 0 69px; background: center/cover no-repeat url("../img/hero/bgHero.png"); }
 
 .hero_top-content { display: flex; justify-content: space-between; font-family: "Raleway"; }
 
@@ -20,7 +20,7 @@
 
 .hero_social-network-container { margin-right: 26px; }
 
-.hero_social-network { margin-right: 19px; }
+.hero_social-network { margin-right: 19px; color: transparent; }
 
 .hero_social-network svg { width: 30px; height: 30px; opacity: 0.35; }
 
@@ -114,7 +114,7 @@
 
 .title:nth-of-type(even) { color: #fff; }
 
-@improt 'variables' {}.chech { background: center/cover no-repeat url("../img/bgHero.png"); padding: 69px 0 75px; }
+.chech { background: center/cover no-repeat url("../img/hero/bgHero.png"); padding: 69px 0 75px; }
 
 .chech .title:after { background-color: #fff; }
 
@@ -138,7 +138,7 @@
 
 .subtitle { margin-top: 36px; text-align: center; font-family: "Raleway"; font-size: 24px; color: #ffffff; }
 
-.previous-button, .next-button { position: absolute; box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.11); background-color: #ffffff; width: 50px; height: 50px; border-radius: 50%; transition: .3s ease-in-out; border: none; top: 44%; outline: none; }
+.previous-button, .next-button { position: absolute; box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.11); background-color: #ffffff; width: 50px; height: 50px; border-radius: 50%; transition: .3s ease-in-out; border: none; top: 37%; outline: none; }
 
 .previous-button svg, .next-button svg { width: 30px; height: 30px; transition: .3s ease-in-out; }
 
@@ -173,3 +173,39 @@
 .beauty_slide { outline: none; }
 
 .beauty_slide img { margin: 0 auto; }
+
+.reviews { padding: 69px 0 74px; background: center/cover no-repeat url("../img/reviews/bg.png"); }
+
+.reviews .title { color: #ffffff; }
+
+.reviews .title:after { content: none; }
+
+.reviews_main-container { position: relative; margin-top: 34px; }
+
+.reviews_slide_photo-container { width: 166px; height: 158px; text-align: center; border-radius: 50%; border-top: 1px solid #fd4d4f; padding: 9px; margin-right: 23px; }
+
+.reviews_slide_photo { position: relative; border-radius: 50%; border-right: 1px solid #fd4d4f; padding: 21px; }
+
+.reviews_slide_photo_img { border-radius: 50%; box-shadow: 0 0 27px 8px rgba(253, 105, 107, 0.52); }
+
+.reviews_slide_icon { position: absolute; right: -15px; top: calc(50%  - 27px); width: 45px; height: 45px; }
+
+.reviews_slide_container { display: flex; margin-bottom: 31px; }
+
+.reviews_slide_container:nth-of-type(2n) { margin-bottom: 0; }
+
+.reviews_slide_item { display: flex; flex-grow: 1; align-items: center; justify-content: center; }
+
+.reviews_slide_info { color: #ffffff; opacity: .35; font-family: "Fira Sans Condensed"; border-bottom: 1px solid rgba(253, 77, 79, 0.4); line-height: 21px; }
+
+.second_subtitle { position: relative; max-width: 717px; width: 100%; margin: 5px auto 0; color: #d3d3d3; font-family: "Raleway"; font-size: 20px; line-height: 30px; text-align: center; padding-bottom: 35px; }
+
+.second_subtitle:after { content: ''; position: absolute; background-color: #10a0db; height: 1px; width: 67px; left: 47%; bottom: 0; }
+
+.vantage { padding: 69px 0 75px; }
+
+.vantage .title:after { content: none; }
+
+.vantage .second_subtitle { color: #7a7a7a; }
+
+.vantage_main-container { padding: 35px 0 35px 54px; background: no-repeat center/cover url(../img/vantage/bg.png); }
