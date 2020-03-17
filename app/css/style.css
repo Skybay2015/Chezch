@@ -111,3 +111,49 @@
 .title { text-align: center; position: relative; padding-bottom: 29px; color: #505050; font-family: "Fira Sans Condensed"; font-size: 36px; font-weight: 500; }
 
 .title:after { content: ''; position: absolute; background-color: #505050; height: 1px; width: 67px; left: 47%; bottom: 0; }
+
+.title:nth-of-type(even) { color: #fff; }
+
+@improt 'variables' {}.chech { background: center/cover no-repeat url("../img/bgHero.png"); padding: 69px 0 75px; }
+
+.chech .title:after { background-color: #fff; }
+
+.chech_main-container { margin-top: 35px; position: relative; }
+
+.chech_container { display: flex; }
+
+.chech_item { height: 383px; padding: 37px 37px 37px 30px; background-color: #fff; margin-right: 5px; }
+
+.chech_item:last-of-type { margin-right: 0; }
+
+.chech_item_info { font-family: "Raleway"; color: #7a7a7a; font-size: 14px; line-height: 24px; }
+
+.chech_item_title-container { display: flex; align-items: center; margin-bottom: 22px; }
+
+.chech_item_title { margin-left: 17px; }
+
+.chech_item_img { width: 60px; height: 60px; }
+
+.chech_item_title { color: #505050; font-size: 18px; line-height: 27px; text-transform: uppercase; font-family: "Fira Sans Condensed"; }
+
+.chech_previous-button, .chech_next-button { position: absolute; box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.11); background-color: #ffffff; width: 50px; height: 50px; border-radius: 50%; transition: .3s ease-in-out; border: none; top: 44%; outline: none; }
+
+.chech_previous-button svg, .chech_next-button svg { width: 30px; height: 30px; transition: .3s ease-in-out; }
+
+.chech_previous-button:hover, .chech_next-button:hover { background-color: #24abe2; transition: .3s ease-in-out; }
+
+.chech_previous-button:hover svg, .chech_next-button:hover svg { fill: #fff; transition: .3s ease-in-out; }
+
+.chech_previous-button { transform: rotate(0.5turn); left: -25px; }
+
+.chech_next-button { right: -25px; }
+
+.chech_subtitle { margin-top: 36px; text-align: center; font-family: "Raleway"; font-size: 24px; color: #ffffff; }
+
+.slider-dots { display: flex; justify-content: center; margin-top: 34px; }
+
+.slider-dots li { max-width: 155px; width: 100%; }
+
+.slider-dots li button { width: inherit; outline: none; border: none; height: 4px; background-color: #f9f9f9; }
+
+.slider-dots li.slick-active button { background-color: #fd4d4f; }

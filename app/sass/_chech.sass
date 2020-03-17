@@ -1,0 +1,114 @@
+@improt 'variables'
+
+.chech 
+   background: center / cover no-repeat url('../img/bgHero.png')
+   padding: 69px 0 75px
+
+   .title:after
+      background-color: #fff
+
+   &_main-container 
+      margin-top: 35px
+      position: relative
+
+   &_container 
+      display: flex
+      
+
+   &_item 
+      height: 383px
+      padding: 37px 37px 37px 30px
+      background-color: #fff
+      margin-right: 5px
+
+      &:last-of-type 
+         margin-right: 0
+
+      &_info
+         font-family: $second_font
+         color: #7a7a7a
+         font-size: 14px
+         line-height: 24px
+
+      &_title-container 
+         display: flex
+         align-items: center
+         margin-bottom: 22px
+
+      &_title 
+         margin-left: 17px
+
+   &_item_img 
+      width: 60px
+      height: 60px
+
+   &_item_title 
+      color: #505050
+      font-size: 18px
+      line-height: 27px
+      text-transform: uppercase
+      font-family: $first_font
+
+
+   &_previous-button, &_next-button
+      position: absolute
+      box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.11)
+      background-color: #ffffff
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      transition: .3s ease-in-out
+      border: none
+      top: 44%
+      outline: none
+
+      svg 
+         width: 30px
+         height: 30px
+         transition: .3s ease-in-out
+
+      &:hover 
+         background-color: #24abe2
+         transition: .3s ease-in-out
+
+         svg 
+            fill: #fff
+            transition: .3s ease-in-out
+
+   &_previous-button 
+      transform: rotate(0.5turn)
+      left: -25px
+
+   &_next-button 
+      right: -25px
+
+   &_subtitle 
+      margin-top: 36px
+      text-align: center
+      font-family: $second_font
+      font-size: 24px
+      color: #ffffff
+
+
+.slider-dots
+   display: flex
+   justify-content: center
+   margin-top: 34px
+
+   li 
+      max-width: 155px
+      width: 100%
+      button 
+         width: inherit
+         outline: none
+         border: none
+         height: 4px
+         
+         background-color: #f9f9f9
+
+   li.slick-active 
+      button 
+         background-color: #fd4d4f
+
+
+   
