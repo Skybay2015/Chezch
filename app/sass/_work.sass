@@ -110,6 +110,7 @@
          color: #ffffff
          border-radius: 50%
          padding: 5px
+         z-index: 3
 
 
       &_info 
@@ -120,6 +121,7 @@
          
             
    &_center-item
+      position: relative
       display: flex
       justify-content: center
       align-items: center
@@ -128,6 +130,19 @@
       height: 518px
       border-radius: 50%
       border: 10px solid #24abe2
+      z-index: 2
+
+      &:after
+         content: ''
+         position: absolute
+         max-width: 323px
+         width: 100%
+         height: 323px
+         background-color: #f9f9f9
+         opacity: 0.1
+         border-radius: 50%
+         z-index: -1
+
 
    .btn
       margin-top: 0

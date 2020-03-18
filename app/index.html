@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,22 +16,22 @@
                <a href="#hero" class="header-item">
                   В начало
                </a>
-               <a href="" class="header-item">
+               <a href="#chech" class="header-item">
                   Почему Чехия?
                </a>
-               <a href="" class="header-item">
+               <a href="#reviews" class="header-item">
                   Видеоотзывы
                </a>
-               <a href="" class="header-item">
+               <a href="#vantage" class="header-item">
                   Почему Evromig?
                </a>
-               <a href="" class="header-item">
+               <a href="#documents" class="header-item">
                   Какие документы Вы получите?
                </a>
-               <a href="" class="header-item">
+               <a href="#work" class="header-item">
                   Как мы работаем?
                </a>
-               <a href="" class="header-item">
+               <a href="#contacts" class="header-item">
                   Контакты
                </a>
             </nav>
@@ -220,9 +220,11 @@
                </div>
 
                <div class="btn_container">
-                  <button class="btn">
-                     Узнать стоимость и сроки за 1 клик
-                  </button>
+                  <div class="btn_wrapper">
+                     <button class="btn">
+                        Узнать стоимость и сроки за 1 клик
+                     </button>
+                  </div>
                </div>
 
                <div class="bottom_info">
@@ -234,7 +236,7 @@
          </div>
       </section>
 
-      <section class="quiz">
+      <section class="quiz" id="quiz">
          <div class="wrapper">
             <h2 class="title">
                РАССЧИТАЙТЕ СТОИМОСТЬ ПЕРЕЕЗДА <br />
@@ -244,15 +246,12 @@
                <div class="quiz_main-container">
                   <div class="quiz_item">
                      <p class="quiz_number">
-                        Вопрос 1 из 4
                      </p>
                      <div class="quiz_progress">
                         <span id="quiz_progress_bar"></span>
                      </div>
                      <div class="quiz_question">
-                        <h2 class="quiz_title"
-                           >Выберете, когда планируете переезд в Чехию:</h2
-                        >
+                        <h2 class="quiz_title"></h2>
                         <div class="quiz_answers-container">
                            <div class="quiz_answer-item">
                               <svg
@@ -269,7 +268,7 @@
                                     d="M38.252 15.336l-15.369 17.29-9.259-7.407a1 1 0 00-1.249 1.562l10 8a.999.999 0 001.373-.117l16-18a1 1 0 10-1.496-1.328z"
                                  />
                               </svg>
-                              <span class="quiz_answer">В ближайшее время</span>
+                              <span class="quiz_answer"></span>
                            </div>
                            <div class="quiz_answer-item">
                               <svg
@@ -286,7 +285,7 @@
                                     d="M38.252 15.336l-15.369 17.29-9.259-7.407a1 1 0 00-1.249 1.562l10 8a.999.999 0 001.373-.117l16-18a1 1 0 10-1.496-1.328z"
                                  />
                               </svg>
-                              <span class="quiz_answer">Через 6 месяцев</span>
+                              <span class="quiz_answer"></span>
                            </div>
                            <div class="quiz_answer-item">
                               <svg
@@ -303,7 +302,7 @@
                                     d="M38.252 15.336l-15.369 17.29-9.259-7.407a1 1 0 00-1.249 1.562l10 8a.999.999 0 001.373-.117l16-18a1 1 0 10-1.496-1.328z"
                                  />
                               </svg>
-                              <span class="quiz_answer">Через год</span>
+                              <span class="quiz_answer"></span>
                            </div>
                            <div class="quiz_answer-item">
                               <svg
@@ -320,34 +319,37 @@
                                     d="M38.252 15.336l-15.369 17.29-9.259-7.407a1 1 0 00-1.249 1.562l10 8a.999.999 0 001.373-.117l16-18a1 1 0 10-1.496-1.328z"
                                  />
                               </svg>
-                              <span class="quiz_answer">Другое...</span>
+                              <span class="quiz_answer"></span>
                            </div>
                         </div>
                      </div>
 
                      <div class="quiz_form_container">
-                        <h2 class="quiz_form_container_title">
+                        <h3 class="quiz_form_container_title">
                            Оставьте номер телефона, чтобы получить резльтаты
                            рассчета стоимости
-                        </h2>
+                        </h3>
                         <form action="" method="POST">
                            <div class="form_input_container">
-                              <label for="phone">
+                              <label for="phoneQuiz">
                                  Введите номер телефона:
                               </label>
                               <input
                                  type="text"
-                                 id="phone"
+                                 id="phoneQuiz"
                                  name="phone"
                                  placeholder="Ваш номер телефона"
                                  required
                               />
                            </div>
                            <div class="btn_container">
-                              <button class="btn">
-                                 ПОЛУЧИТЬ РЕЗУЛЬТАТЫ
-                              </button>
+                              <div class="btn_wrapper">
+                                 <button class="btn">
+                                    ПОЛУЧИТЬ РЕЗУЛЬТАТЫ
+                                 </button>
+                              </div>
                            </div>
+
                            <div class="form_bottom">
                               <input type="checkbox" name="agree" />
                               <p
@@ -358,9 +360,11 @@
                         </form>
                      </div>
                      <div class="btn_container quiz_btn">
-                        <button id="quiz_btn_next" class="btn">
-                           Следующий вопрос
-                        </button>
+                        <div class="btn_wrapper">
+                           <button id="quiz_btn_next" class="btn">
+                              Следующий вопрос
+                           </button>
+                        </div>
                         <span id="quiz_btn_prev" class="quiz_previous-question">
                            Предыдущий вопрос
                         </span>
@@ -371,7 +375,7 @@
          </div>
       </section>
 
-      <section class="chech">
+      <section class="chech" id="chech">
          <div class="wrapper">
             <h2 class="title" hidden></h2>
             <h2 class="title">
@@ -623,14 +627,16 @@
                Узнайте, как переехать в Чехию
             </h3>
             <div class="btn_container">
-               <button class="btn">
-                  ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ!
-               </button>
+               <div class="btn_wrapper">
+                  <button class="btn">
+                     ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ!
+                  </button>
+               </div>
             </div>
          </div>
       </section>
 
-      <section class="beauty">
+      <section class="beauty" id="beauty">
          <div class="wrapper">
             <h2 class="beauty_title title">
                ПРОСТО ПОСМОТРИТЕ НА ЭТУ КРАСОТУ
@@ -667,14 +673,16 @@
                Поделимся опытом проживания в Чехии
             </h3>
             <div class="btn_container">
-               <button class="btn">
-                  ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ!
-               </button>
+               <div class="btn_wrapper">
+                  <button class="btn">
+                     ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ!
+                  </button>
+               </div>
             </div>
          </div>
       </section>
 
-      <section class="reviews">
+      <section class="reviews" id="reviews">
          <div class="wrapper">
             <h2 class="title">
                ЧТО ГОВОРЯТ НАШИ КЛИЕНТЫ, <br />
@@ -697,11 +705,12 @@
                                  <img
                                     class="reviews_slide_photo_img"
                                     src="./img/reviews/Привью.png"
-                                    alt=""
+                                    alt="icon"
                                  />
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
+                                    alt='icon'
                                  />
                               </div>
                            </div>
@@ -720,11 +729,12 @@
                                  <img
                                     class="reviews_slide_photo_img"
                                     src="./img/reviews/Привью.png"
-                                    alt=""
+                                    alt="icon"
                                  />
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
+                                    alt="icon"
                                  />
                               </div>
                            </div>
@@ -743,11 +753,12 @@
                                  <img
                                     class="reviews_slide_photo_img"
                                     src="./img/reviews/Привью.png"
-                                    alt=""
+                                    alt="icon"
                                  />
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
+                                    alt="icon"
                                  />
                               </div>
                            </div>
@@ -769,11 +780,12 @@
                                  <img
                                     class="reviews_slide_photo_img"
                                     src="./img/reviews/Привью.png"
-                                    alt=""
+                                    alt="icon"
                                  />
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
+                                    alt="icon"
                                  />
                               </div>
                            </div>
@@ -792,11 +804,12 @@
                                  <img
                                     class="reviews_slide_photo_img"
                                     src="./img/reviews/Привью.png"
-                                    alt=""
+                                    alt="icon"
                                  />
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
+                                    alt="icon"
                                  />
                               </div>
                            </div>
@@ -815,11 +828,12 @@
                                  <img
                                     class="reviews_slide_photo_img"
                                     src="./img/reviews/Привью.png"
-                                    alt=""
+                                    alt="icon"
                                  />
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
+                                    alt="icon"
                                  />
                               </div>
                            </div>
@@ -842,11 +856,12 @@
                                  <img
                                     class="reviews_slide_photo_img"
                                     src="./img/reviews/Привью.png"
-                                    alt=""
+                                    alt="icon"
                                  />
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
+                                    alt="icon"
                                  />
                               </div>
                            </div>
@@ -865,11 +880,12 @@
                                  <img
                                     class="reviews_slide_photo_img"
                                     src="./img/reviews/Привью.png"
-                                    alt=""
+                                    alt="icon"
                                  />
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
+                                    alt="icon"
                                  />
                               </div>
                            </div>
@@ -888,11 +904,12 @@
                                  <img
                                     class="reviews_slide_photo_img"
                                     src="./img/reviews/Привью.png"
-                                    alt=""
+                                    alt="icon"
                                  />
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
+                                    alt="icon"
                                  />
                               </div>
                            </div>
@@ -914,11 +931,12 @@
                                  <img
                                     class="reviews_slide_photo_img"
                                     src="./img/reviews/Привью.png"
-                                    alt=""
+                                    alt="icon"
                                  />
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
+                                    alt="icon"
                                  />
                               </div>
                            </div>
@@ -937,11 +955,12 @@
                                  <img
                                     class="reviews_slide_photo_img"
                                     src="./img/reviews/Привью.png"
-                                    alt=""
+                                    alt="icon"
                                  />
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
+                                    alt="icon"
                                  />
                               </div>
                            </div>
@@ -960,11 +979,12 @@
                                  <img
                                     class="reviews_slide_photo_img"
                                     src="./img/reviews/Привью.png"
-                                    alt=""
+                                    alt="icon"
                                  />
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
+                                    alt="icon"
                                  />
                               </div>
                            </div>
@@ -987,11 +1007,12 @@
                                  <img
                                     class="reviews_slide_photo_img"
                                     src="./img/reviews/Привью.png"
-                                    alt=""
+                                    alt="icon"
                                  />
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
+                                    alt="icon"
                                  />
                               </div>
                            </div>
@@ -1010,11 +1031,12 @@
                                  <img
                                     class="reviews_slide_photo_img"
                                     src="./img/reviews/Привью.png"
-                                    alt=""
+                                    alt="icon"
                                  />
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
+                                    alt="icon"
                                  />
                               </div>
                            </div>
@@ -1033,11 +1055,12 @@
                                  <img
                                     class="reviews_slide_photo_img"
                                     src="./img/reviews/Привью.png"
-                                    alt=""
+                                    alt="icon"
                                  />
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
+                                    alt="icon"
                                  />
                               </div>
                            </div>
@@ -1059,11 +1082,12 @@
                                  <img
                                     class="reviews_slide_photo_img"
                                     src="./img/reviews/Привью.png"
-                                    alt=""
+                                    alt="icon"
                                  />
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
+                                    alt="icon"
                                  />
                               </div>
                            </div>
@@ -1082,11 +1106,12 @@
                                  <img
                                     class="reviews_slide_photo_img"
                                     src="./img/reviews/Привью.png"
-                                    alt=""
+                                    alt="icon"
                                  />
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
+                                    alt="icon"
                                  />
                               </div>
                            </div>
@@ -1105,11 +1130,12 @@
                                  <img
                                     class="reviews_slide_photo_img"
                                     src="./img/reviews/Привью.png"
-                                    alt=""
+                                    alt="icon"
                                  />
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
+                                    alt="icon"
                                  />
                               </div>
                            </div>
@@ -1144,9 +1170,11 @@
             </div>
 
             <div class="btn_container">
-               <button class="btn">
-                  Узнать стоимость и сроки за 1 клик
-               </button>
+               <div class="btn_wrapper">
+                  <button class="btn">
+                     Узнать стоимость и сроки за 1 клик
+                  </button>
+               </div>
             </div>
 
             <div class="bottom_info">
@@ -1157,7 +1185,7 @@
          </div>
       </section>
 
-      <section class="vantage">
+      <section class="vantage" id="vantage">
          <div class="wrapper">
             <h2 class="title">
                ПОЧЕМУ МЫ?
@@ -1235,7 +1263,7 @@
                   alt="Family"
                />
             </div>
-            <h2 class="subtitle">Вот какие документы Вы получите в итоге: </h2>
+            <h2 id="documents" class="subtitle">Вот какие документы Вы получите в итоге: </h2>
          </div>
          <div class="vantage_main-video-container">
             <div class="vantage_video-slider">
@@ -1378,14 +1406,16 @@
                </button>
             </div>
             <div class="btn_container">
-               <button class="btn">
-                  Узнать стоимость и сроки за 1 клик
-               </button>
+               <div class="btn_wrapper">
+                  <button class="btn">
+                     Узнать стоимость и сроки за 1 клик
+                  </button>
+               </div>
             </div>
          </div>
       </section>
 
-      <section class="work">
+      <section class="work" id="work">
          <div class="wrapper">
             <h2 class="title">
                КАК МЫ РАБОТАЕМ?
@@ -1501,14 +1531,16 @@
                </div>
             </div>
             <div class="btn_container">
-               <button class="btn">
-                  ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ!
-               </button>
+               <div class="btn_wrapper">
+                  <button class="btn">
+                     ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ!
+                  </button>
+               </div>
             </div>
          </div>
       </section>
 
-      <section class="contacts">
+      <section class="contacts" id="contacts">
          <div class="wrapper">
             <h2 class="title">
                НАШИ КОНТАКТЫ
@@ -1559,7 +1591,7 @@
                      в течение 1-ой минуты
                   </p>
 
-                  <form action="" method="POST" id="question_form">
+                  <form action="" method="POST">
                      <div class="form_input_container">
                         <label for="question">
                            Введите текст вопроса:
@@ -1584,16 +1616,19 @@
                         />
                      </div>
                      <div class="btn_container">
-                        <button form="question_form" type="submit" class="btn">
-                           Задать вопрос!
-                        </button>
+                        <div class="btn_wrapper">
+                           <button
+                              type="submit"
+                              class="btn"
+                           >
+                              Задать вопрос!
+                           </button>
+                        </div>
                      </div>
                      <div class="form_bottom">
                         <input type="checkbox" name="agree" />
-                        <p
-                           >Согласен с
-                           <span>политикой конфиденциальности</span></p
-                        >
+                        <p>Согласен с
+                           <span>политикой конфиденциальности</span></p>
                      </div>
                   </form>
                </div>
@@ -1711,7 +1746,7 @@
                </a>
             </div>
             <a href="#hero" class="go_up">
-               <img src="./img/contacts/up-arrow.svg" />
+               <img src="./img/contacts/up-arrow.svg" alt='arrow'/>
                Наверх
             </a>
          </div>
@@ -1730,8 +1765,11 @@
          </div>
       </footer>
 
+      
+
       <script src="./js/jquery.min.js"></script>
       <script src="./js/slick.min.js"></script>
       <script src="./js/index.min.js"></script>
+
    </body>
 </html>

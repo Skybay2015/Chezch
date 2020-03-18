@@ -26,13 +26,15 @@ table{border-collapse:collapse;border-spacing:0}.slick-slider{position:relative;
 .hero_title{margin-top:71px;font-family:"Fira Sans Condensed";font-size:48px;font-weight:500;color:#fff;text-align:center}
 .hero_subtitle{position:relative;margin-top:34px;padding-bottom:34px;line-height:30px;font-family:"Raleway";color:#fff;font-size:24px;text-align:center;font-weight:400}
 .hero_subtitle:after{content:'';position:absolute;background-color:#fff;height:1px;width:67px;left:47%;bottom:0}
-.hero_advantages-main-container{font-family:"Raleway"}.hero_advantages-container{display:flex}
-.hero_advantages-container:first-of-type{padding:37px 17px 18px;border-bottom:1px solid rgba(232,232,232,0.1)}
+.hero_advantages-main-container{font-family:"Raleway";margin-bottom:50px}
+.hero_advantages-container{display:flex}.hero_advantages-container:first-of-type{padding:37px 17px 18px;border-bottom:1px solid rgba(232,232,232,0.1)}
 .hero_advantages-container:last-of-type{padding:18px 17px 0}.hero_advantages-item{display:flex;align-items:center;flex-grow:1;max-width:25%}
 .hero_advantages-item span{line-height:21px;margin-left:18px;color:#fff}.btn_container{z-index:1;text-align:center;position:relative}
-.btn{position:relative;box-shadow:inset 0 -1px 0 #fd6264;border-radius:4px;background-image:linear-gradient(to top,#fd4d4f 0,#fd8687 100%);color:#fff;font-family:"Fira Sans Condensed";text-transform:uppercase;text-shadow:0 1px 0 #d94244;border:0;padding:29px 42px;margin-top:50px;font-size:16px}
-.btn:after{content:'';width:100%;height:100%;box-shadow:0 3px 27px 1px rgba(253,105,107,0.52);border-radius:14px;background-color:#aa3435;position:absolute;left:0;bottom:-6px;z-index:-1}
-.bottom_info{margin-top:19px;text-align:center}.bottom_info span{font-family:"Raleway"}
+.btn_wrapper{position:relative;display:inline-block}.btn_wrapper:after{content:'';width:100%;height:100%;box-shadow:0 3px 27px 1px rgba(253,105,107,0.52);border-radius:14px;background-color:#aa3435;position:absolute;left:0;bottom:-6px;z-index:-1}
+.btn{position:relative;box-shadow:inset 0 -1px 0 #fd6264;border-radius:4px;background-image:linear-gradient(to top,#fd4d4f 0,#fd8687 100%);color:#fff;font-family:"Fira Sans Condensed";text-transform:uppercase;text-shadow:0 1px 0 #d94244;border:0;padding:29px 42px;font-size:16px;overflow:hidden;outline:0;cursor:pointer}
+.btn:before{content:'';width:2em;height:100%;position:absolute;top:0;left:0;background-color:rgba(255,255,255,0.8);transform:translate(-5em) skewX(-45deg);animation:move-light 2.5s infinite}
+@keyframes move-light{from{transform:translate(-5em) skewX(-45deg)}to{transform:translate(27em) skewX(-45deg)}
+}.bottom_info{margin-top:19px;text-align:center}.bottom_info span{font-family:"Raleway"}
 .quiz{padding:68px 0 73px}.quiz_content{background:url(../img/quiz/accounting_services_.png) no-repeat left,url(../img/quiz/accounting_servicesR.png) no-repeat right}
 .quiz_answers-container{display:flex;flex-wrap:wrap}.quiz_answer{font-family:"Raleway";margin-left:19px;border-bottom:1px solid rgba(16,160,219,0.2);padding-bottom:2px;color:#24ace3;transition:.3s ease-in-out}
 .quiz_answer-item{display:flex;align-items:center;margin-right:29px;margin-bottom:18px;padding:18px 87px 17px 31px;transition:.3s ease-in-out;border-radius:4px;background-color:#f9f9f9;border:1px solid #f9f9f9;max-width:188px;width:100%}
@@ -46,20 +48,23 @@ table{border-collapse:collapse;border-spacing:0}.slick-slider{position:relative;
 .quiz_progress{position:relative;max-width:100%;width:100%;height:4px;background-color:#f9f9f9}
 .quiz_progress span{position:absolute;max-width:25%;width:100%;height:4px;background-color:#fd4d4f;transition:all .3s ease-in-out}
 .quiz_title{color:#505050;font-size:24px;font-family:"Raleway";text-align:center;padding:33px 0 35px}
-.quiz_btn{text-align:left}.quiz_btn button{padding:25px 85px 27px;margin-left:5px;margin-right:29px}
-.quiz_previous-question{font-family:"Raleway";opacity:.5;color:#505050;border-bottom:1px solid rgba(80,80,80,0.1)}
+.quiz_btn{text-align:left;margin-top:17px}.quiz_btn button{padding:25px 85px 27px}
+.quiz_btn .btn_wrapper{margin-right:29px}.quiz_previous-question{font-family:"Raleway";opacity:.5;color:#505050;border-bottom:1px solid rgba(80,80,80,0.1);cursor:pointer}
 .quiz_form_container{margin-top:33px}.quiz_form_container_title{font-family:"Raleway";color:#505050;font-size:24px;margin-bottom:35px}
-.quiz_form_container .btn_container{text-align:left;max-width:293px}.quiz_form_container .btn_container .btn{width:100%;margin-top:0}
+.quiz_form_container .btn_container{text-align:left;max-width:293px;padding-left:5px}
+.quiz_form_container .btn_container .btn_wrapper,.quiz_form_container .btn_container .btn{width:100%}
 .quiz_form_container .form_bottom{justify-content:flex-start;margin-left:17px}.quiz .form_input_container{margin-bottom:35px}
 .quiz .form_input_container input{max-width:290px}.title{text-align:center;position:relative;padding-bottom:29px;color:#505050;font-family:"Fira Sans Condensed";font-size:36px;font-weight:500}
 .title:after{content:'';position:absolute;background-color:#505050;height:1px;width:67px;left:47%;bottom:0}
-.title:nth-of-type(even){color:#fff}.chech{background:center/cover no-repeat url("../img/hero/bgHero.png");padding:69px 0 75px}
+.title:nth-of-type(even){color:#fff}.selected{box-shadow:0 3px 18px 3px rgba(253,105,107,0.14);border:1px solid #fdadae;transition:.3s ease-in-out;background-color:#fff}
+.selected .quiz_answer-item_icon{fill:#fd4d4f;transition:.3s ease-in-out}.selected .quiz_answer-item_icon .quiz_answer{color:#777;border-bottom:1px solid rgba(253,77,79,0.5);transition:.3s ease-in-out}
+.chech{background:center/cover no-repeat url("../img/hero/bgHero.png");padding:69px 0 75px}
 .chech .title:after{background-color:#fff}.chech_main-container{margin-top:35px;position:relative}
 .chech_container{display:flex}.chech_item{height:383px;padding:37px 37px 37px 30px;background-color:#fff;margin-right:5px}
 .chech_item:last-of-type{margin-right:0}.chech_item_info{font-family:"Raleway";color:#7a7a7a;font-size:14px;line-height:24px}
 .chech_item_title-container{display:flex;align-items:center;margin-bottom:22px}.chech_item_title{margin-left:17px}
 .chech_item_img{width:60px;height:60px}.chech_item_title{color:#505050;font-size:18px;line-height:27px;text-transform:uppercase;font-family:"Fira Sans Condensed"}
-.subtitle{margin-top:36px;text-align:center;font-family:"Raleway";font-size:24px;color:#fff}
+.subtitle{margin-top:36px;margin-bottom:35px;text-align:center;font-family:"Raleway";font-size:24px;color:#fff}
 .previous-button,.next-button{position:absolute;box-shadow:2px 3px 7px rgba(0,0,0,0.11);background-color:#fff;width:50px;height:50px;border-radius:50%;transition:.3s ease-in-out;border:0;top:37%;outline:0}
 .previous-button svg,.next-button svg{width:30px;height:30px;transition:.3s ease-in-out}
 .previous-button:hover,.next-button:hover{background-color:#24abe2;transition:.3s ease-in-out}
@@ -70,14 +75,15 @@ table{border-collapse:collapse;border-spacing:0}.slick-slider{position:relative;
 .beauty_title:after{background-color:#10a0db}.beauty_main-container{margin-top:35px;position:relative}
 .beauty_previous-button{left:170px}.beauty_next-button{right:170px}.beauty .subtitle{color:#505050}
 .beauty_slide{outline:0}.beauty_slide img{margin:0 auto}.reviews{padding:69px 0 74px;background:center/cover no-repeat url("../img/reviews/bg.png")}
-.reviews .title{color:#fff}.reviews .title:after{content:none}.reviews_main-container{position:relative;margin-top:34px}
+.reviews .title{color:#fff}.reviews .title:after{content:none}.reviews_main-container{position:relative;margin:34px 0}
 .reviews_slide_photo-container{width:166px;height:158px;text-align:center;border-radius:50%;border-top:1px solid #fd4d4f;padding:9px;margin-right:23px}
 .reviews_slide_photo{position:relative;border-radius:50%;border-right:1px solid #fd4d4f;padding:21px}
 .reviews_slide_photo_img{border-radius:50%;box-shadow:0 0 27px 8px rgba(253,105,107,0.52)}
 .reviews_slide_icon{position:absolute;right:-15px;top:calc(50% - 27px);width:45px;height:45px}
 .reviews_slide_container{display:flex;margin-bottom:31px}.reviews_slide_container:nth-of-type(2n){margin-bottom:0}
-.reviews_slide_item{display:flex;flex-grow:1;align-items:center;justify-content:center}
-.reviews_slide_info{color:#fff;opacity:.35;font-family:"Fira Sans Condensed";border-bottom:1px solid rgba(253,77,79,0.4);line-height:21px}
+.reviews_slide_item{display:flex;flex-grow:1;align-items:center;justify-content:center;opacity:.6;transition:.3s ease-in-out}
+.reviews_slide_item:hover{opacity:1;transition:.3s ease-in-out}.reviews_slide_item:hover .reviews_slide_info{opacity:1;transition:.3s ease-in-out}
+.reviews_slide_info{color:#fff;opacity:.35;font-family:"Fira Sans Condensed";border-bottom:1px solid #fd4d4f;line-height:21px;transition:.3s ease-in-out}
 .second_subtitle{position:relative;max-width:717px;width:100%;margin:5px auto 0;color:#d3d3d3;font-family:"Raleway";font-size:20px;line-height:30px;text-align:center;padding-bottom:35px}
 .second_subtitle:after{content:'';position:absolute;background-color:#10a0db;height:1px;width:67px;left:47%;bottom:0}
 .vantage{padding:69px 0 75px}.vantage .title:after{content:none}.vantage .second_subtitle{color:#7a7a7a}
@@ -94,7 +100,8 @@ table{border-collapse:collapse;border-spacing:0}.slick-slider{position:relative;
 .vantage_video-item_playpause_wrapper{display:flex;justify-content:center;align-items:center;border-right:1px solid #fd4d4f;border-bottom:1px solid #fd4d4f;border-radius:50%;width:72px;height:71px;margin:10px auto 0}
 .vantage_video-item_playpause{background:#fff;border-radius:50%;border-bottom:1px solid #fd4d4f;width:51px;display:flex;height:51px;align-items:center;justify-content:center}
 .vantage_video-item_playpause_elem{width:0;height:0;border-style:solid;border-width:9.5px 0 9.5px 12px;border-color:transparent transparent transparent #fd4d4f}
-.vantage_main-photo-container{margin-top:42px;position:relative}.vantage_main-photo-container .previous-button,.vantage_main-photo-container .next-button{top:28%}
+.vantage_main-photo-container{position:relative;margin-top:42px;margin-bottom:34px}
+.vantage_main-photo-container .previous-button,.vantage_main-photo-container .next-button{top:28%}
 .vantage_photo-slider .vantage_photo-item{display:flex;justify-content:space-between}
 .vantage_photo-item img{border:1px solid transparent;border-radius:4px;transition:.3s ease-in-out}
 .vantage_photo-item img:hover{border:1px solid #fd4d4f;transition:.3s ease-in-out}
@@ -111,15 +118,16 @@ table{border-collapse:collapse;border-spacing:0}.slick-slider{position:relative;
 .work_item_wrapper:nth-child(5){bottom:63px;left:83px;max-width:263px}.work_item_wrapper:nth-child(5) .work_item_number{top:-12px;right:-12px}
 .work_item_wrapper:nth-child(5) .work_item{padding:25px 33px 30px 29px}.work_item_wrapper:nth-child(6){top:160px;left:70px;max-width:263px}
 .work_item_wrapper:nth-child(6) .work_item_number{right:-15px;bottom:-12px}.work_item_title{color:#24abe2;font-size:20px;font-family:"Fira Sans Condensed";margin-bottom:16px;line-height:30px}
-.work_item_number{position:absolute;display:flex;justify-content:center;align-items:center;background-color:#fd4d4f;width:30px;height:30px;color:#fff;border-radius:50%;padding:5px}
+.work_item_number{position:absolute;display:flex;justify-content:center;align-items:center;background-color:#fd4d4f;width:30px;height:30px;color:#fff;border-radius:50%;padding:5px;z-index:3}
 .work_item_info{color:#fff;font-family:"Raleway";font-size:14px;line-height:21px}
-.work_center-item{display:flex;justify-content:center;align-items:center;max-width:518px;width:100%;height:518px;border-radius:50%;border:10px solid #24abe2}
+.work_center-item{position:relative;display:flex;justify-content:center;align-items:center;max-width:518px;width:100%;height:518px;border-radius:50%;border:10px solid #24abe2;z-index:2}
+.work_center-item:after{content:'';position:absolute;max-width:323px;width:100%;height:323px;background-color:#f9f9f9;opacity:.1;border-radius:50%;z-index:-1}
 .work .btn{margin-top:0}.contacts{padding:69px 0 50px;background:no-repeat center/cover url(../img/contacts/bg.png)}
 .contacts .wrapper{position:relative}.contacts .title:after{background-color:#24abe2}
 .contacts_main-container{display:flex;justify-content:center;margin-top:34px}.contacts_container{margin-right:20px;width:100%;max-width:355px}
 .contacts_container:last-child{margin-right:0}.contacts_container:nth-child(2){padding:37px 50px 37px 52px;background-color:#fff;border-radius:4px;border:1px solid #24abe2;max-width:291px}
 .contacts_item{display:flex;align-items:center;padding:32px 0 32px 35px;border-bottom:1px solid rgba(0,0,0,0.07);color:#505050;font-family:"Fira Sans Condensed"}
-.contacts_item img{margin-right:20px}.contacts_item:first-of-type{align-items:flex-start}
+.contacts_item img{width:30px;margin-right:20px}.contacts_item:first-of-type{align-items:flex-start}
 .contacts_item:first-of-type img{margin-right:29px}.contacts_item:nth-child(2n){font-family:"Raleway";font-size:14px}
 .contacts_item:nth-child(4n){border-bottom:0}.contacts_item:nth-child(7){padding-top:43px;padding-bottom:43px}
 .contacts_item_info{display:flex;flex-direction:column;font-size:20px}.contacts_item_info span:nth-child(2){margin-top:13px}
@@ -131,15 +139,15 @@ table{border-collapse:collapse;border-spacing:0}.slick-slider{position:relative;
 .contacts_social-networks_item svg{width:30px;height:30px;opacity:.35;transition:.3s ease-in-out}
 .contacts_social-networks_item:last-of-type{margin-right:0}.contacts_social-networks_item:last-of-type svg{width:35px}
 .contacts_social-networks_item:first-of-type{margin-right:17px}.contacts_social-networks_item:first-of-type svg{width:35px}
-.contacts_social-networks_item:hover svg{opacity:1;transition:.3s ease-in-out}.contacts .btn{margin-top:0;outline:0;width:100%}
+.contacts_social-networks_item:hover svg{opacity:1;transition:.3s ease-in-out}.contacts .btn_wrapper,.contacts .btn{width:100%}
 .form_input_container{display:flex;flex-direction:column;margin-bottom:21px}.form_input_container label{font-size:10px;color:#505050;font-family:"Raleway"}
 .form_input_container input{outline:0;padding:11px 0 13px;border:0;border-bottom:1px solid rgba(0,0,0,0.14);transition:.3s ease-in-out}
 .form_input_container input::placeholder{font-family:"Raleway";font-size:16px;transition:.3s ease-in-out;overflow:visible}
-.form_input_container input:focus{color:#24abe2;border-bottom:1px solid #24abe2;transition:.3s ease-in-out}
-.form_input_container input:focus::placeholder{transition:.3s ease-in-out;color:#24abe2}
+.form_input_container input:focus,.form_input_container input:hover{color:#24abe2;border-bottom:1px solid #24abe2;transition:.3s ease-in-out}
+.form_input_container input:focus::placeholder,.form_input_container input:hover::placeholder{transition:.3s ease-in-out;color:#24abe2}
 .form_bottom{display:flex;align-items:center;justify-content:center;margin-top:26px}
 .form_bottom p{margin-left:10px;font-family:"Raleway";font-size:11px}
-.form_bottom p span{color:#3a6fbf;text-decoration:underline}.go_up{position:absolute;display:flex;flex-direction:column;align-items:center;opacity:.5;transition:.3s ease-in-out;right:0;bottom:-23px;text-decoration:none;color:#74929e;text-transform:uppercase;font-size:12px}
+.form_bottom p span{cursor:pointer;color:#3a6fbf;text-decoration:underline}.go_up{position:absolute;display:flex;flex-direction:column;align-items:center;opacity:.5;transition:.3s ease-in-out;right:0;bottom:-23px;text-decoration:none;color:#74929e;text-transform:uppercase;font-size:12px}
 .go_up img{width:30px;height:30px;margin-bottom:10px}.go_up:hover{opacity:1;transition:.3s ease-in-out}
 .footer{padding:30px 0;background-color:#000;font-family:"Raleway";font-size:10px;color:#fff}
 .footer .wrapper{display:flex;justify-content:space-between}.footer_rights{opacity:.2}

@@ -42,6 +42,7 @@
       font-family: $first_font
 
       img 
+         width: 30px
          margin-right: 20px
 
       &:first-of-type
@@ -124,9 +125,7 @@
             opacity: 1
             transition: .3s ease-in-out
 
-   .btn 
-      margin-top: 0
-      outline: none
+   .btn_wrapper, .btn  
       width: 100%
 
 
@@ -154,12 +153,12 @@
          transition: .3s ease-in-out
          overflow: visible
 
-      &:focus
+      &:focus, &:hover
          color: #24abe2
          border-bottom: 1px solid #24abe2
          transition: .3s ease-in-out
 
-      &:focus::placeholder 
+      &:focus::placeholder, &:hover::placeholder 
          transition: .3s ease-in-out
          color: #24abe2
 
@@ -174,6 +173,7 @@
       font-family: $second_font
       font-size: 11px
       span 
+         cursor: pointer
          color: #3a6fbf
          text-decoration: underline
 

@@ -10,9 +10,9 @@
       &:after 
          content: none
 
-   &_main-container
+   &_main-container,
       position: relative
-      margin-top: 34px
+      margin: 34px 0
 
 
    &_slide_photo-container 
@@ -53,14 +53,25 @@
       flex-grow: 1
       align-items: center
       justify-content: center
+      opacity: .6
+      transition: .3s ease-in-out
+
+      &:hover 
+         opacity: 1
+         transition: .3s ease-in-out
+
+         .reviews_slide_info 
+            opacity: 1
+            transition: .3s ease-in-out
 
 
    &_slide_info 
       color: #ffffff
       opacity: .35
       font-family: $first_font
-      border-bottom: 1px solid rgba(253, 77, 79, .4)
+      border-bottom: 1px solid rgb(253, 77, 79)
       line-height: 21px
+      transition: .3s ease-in-out
 
 .second_subtitle
       position: relative

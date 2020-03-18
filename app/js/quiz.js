@@ -41,15 +41,22 @@
       const { questions, activeQuestion } = quiz;
       $('.quiz_title').text(questions[activeQuestion].question);
 
+      // Cпрятать кнопку пред вопроса и форму обратной свзяи
       $('#quiz_btn_prev').hide();
       $('.quiz_form_container').hide();
 
+      //Пройтись циклом по елементам и добавить им вопросы из объекта quiz
       $('.quiz_answer').each(function(index) {
          $(this).text(questions[activeQuestion].answers[index]);
          $(this)
             .parent()
-            .on('click', () => {
+            // Добавлять
+            .on('click', function (e) {
                quiz.answer = questions[activeQuestion].answers[index];
+
+               unhighlightElement()
+
+               $(this).addClass('selected')
             });
       });
    });
@@ -57,6 +64,8 @@
    $('#quiz_btn_next').on('click', () => {
       let { activeQuestion } = quiz;
       const { answers } = quiz;
+
+      unhighlightElement()
 
       if (quiz.activeQuestion === 3) {
          quiz.finished = true;
@@ -87,6 +96,9 @@
    $('#quiz_btn_prev').on('click', () => {
       let { activeQuestion } = quiz;
 
+      unhighlightElement()
+
+      quiz.answer = '';
       quiz.answers.pop();
 
       quiz.activeQuestion = --activeQuestion;
@@ -101,6 +113,12 @@
 
       renderQuestions(activeQuestion);
    });
+
+   function unhighlightElement () {
+      $('.quiz_answer').each(function() {
+         $(this).parent().removeClass('selected')
+      })
+   }
 
    function renderQuestions(activeQuestion) {
       $('.quiz_answer').each(function(index) {
