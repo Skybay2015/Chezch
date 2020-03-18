@@ -35,7 +35,7 @@ table{border-collapse:collapse;border-spacing:0}.slick-slider{position:relative;
 .bottom_info{margin-top:19px;text-align:center}.bottom_info span{font-family:"Raleway"}
 .quiz{padding:68px 0 73px}.quiz_content{background:url(../img/quiz/accounting_services_.png) no-repeat left,url(../img/quiz/accounting_servicesR.png) no-repeat right}
 .quiz_answers-container{display:flex;flex-wrap:wrap}.quiz_answer{font-family:"Raleway";margin-left:19px;border-bottom:1px solid rgba(16,160,219,0.2);padding-bottom:2px;color:#24ace3;transition:.3s ease-in-out}
-.quiz_answer-item{display:flex;align-items:center;margin-right:29px;margin-bottom:18px;padding:18px 87px 17px 31px;transition:.3s ease-in-out;border-radius:4px;background-color:#f9f9f9;border:1px solid #f9f9f9;max-width:30%;flex-grow:1}
+.quiz_answer-item{display:flex;align-items:center;margin-right:29px;margin-bottom:18px;padding:18px 87px 17px 31px;transition:.3s ease-in-out;border-radius:4px;background-color:#f9f9f9;border:1px solid #f9f9f9;max-width:188px;width:100%}
 .quiz_answer-item:hover{box-shadow:0 3px 18px 3px rgba(253,105,107,0.14);border:1px solid #fdadae;transition:.3s ease-in-out;background-color:#fff}
 .quiz_answer-item:hover .quiz_answer-item_icon{fill:#fd4d4f;transition:.3s ease-in-out}
 .quiz_answer-item:hover .quiz_answer{color:#777;border-bottom:1px solid rgba(253,77,79,0.5);transition:.3s ease-in-out}
@@ -44,11 +44,14 @@ table{border-collapse:collapse;border-spacing:0}.slick-slider{position:relative;
 .quiz_item{border:1px solid #f0f0f0;border-radius:4px;padding:51px 108px 40px 99px}
 .quiz_number{text-align:center;font-family:"Raleway";color:#7a7a7a;font-size:12px;font-weight:500;margin-bottom:34px}
 .quiz_progress{position:relative;max-width:100%;width:100%;height:4px;background-color:#f9f9f9}
-.quiz_progress span{position:absolute;left:0;max-width:25%;width:100%;height:4px;background-color:#fd4d4f}
+.quiz_progress span{position:absolute;max-width:25%;width:100%;height:4px;background-color:#fd4d4f;transition:all .3s ease-in-out}
 .quiz_title{color:#505050;font-size:24px;font-family:"Raleway";text-align:center;padding:33px 0 35px}
 .quiz_btn{text-align:left}.quiz_btn button{padding:25px 85px 27px;margin-left:5px;margin-right:29px}
 .quiz_previous-question{font-family:"Raleway";opacity:.5;color:#505050;border-bottom:1px solid rgba(80,80,80,0.1)}
-.title{text-align:center;position:relative;padding-bottom:29px;color:#505050;font-family:"Fira Sans Condensed";font-size:36px;font-weight:500}
+.quiz_form_container{margin-top:33px}.quiz_form_container_title{font-family:"Raleway";color:#505050;font-size:24px;margin-bottom:35px}
+.quiz_form_container .btn_container{text-align:left;max-width:293px}.quiz_form_container .btn_container .btn{width:100%;margin-top:0}
+.quiz_form_container .form_bottom{justify-content:flex-start;margin-left:17px}.quiz .form_input_container{margin-bottom:35px}
+.quiz .form_input_container input{max-width:290px}.title{text-align:center;position:relative;padding-bottom:29px;color:#505050;font-family:"Fira Sans Condensed";font-size:36px;font-weight:500}
 .title:after{content:'';position:absolute;background-color:#505050;height:1px;width:67px;left:47%;bottom:0}
 .title:nth-of-type(even){color:#fff}.chech{background:center/cover no-repeat url("../img/hero/bgHero.png");padding:69px 0 75px}
 .chech .title:after{background-color:#fff}.chech_main-container{margin-top:35px;position:relative}

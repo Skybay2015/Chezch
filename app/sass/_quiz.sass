@@ -28,8 +28,8 @@
       border-radius: 4px
       background-color: #f9f9f9
       border: 1px solid #f9f9f9
-      max-width: 30%
-      flex-grow: 1
+      max-width: 188px
+      width: 100%
 
       &:hover
          box-shadow: 0 3px 18px 3px rgba(253, 105, 107, 0.14)
@@ -88,11 +88,11 @@
 
       span 
          position: absolute
-         left: 0
          max-width: 25%
          width: 100%
          height: 4px
          background-color: #fd4d4f
+         transition: all .3s ease-in-out
 
 
    &_title 
@@ -114,6 +114,40 @@
       opacity: 0.5
       color: #505050
       border-bottom: 1px solid rgba(80, 80, 80, .1)
+
+   &_form_container
+      margin-top: 33px
+
+      &_title 
+         font-family: $second_font
+         color: #505050
+         font-size: 24px
+         margin-bottom: 35px
+
+      .btn_container 
+         text-align: left
+         max-width: 293px
+         
+         .btn 
+            width: 100%
+            margin-top: 0
+
+      .form_bottom 
+
+         justify-content: flex-start
+         margin-left: 17px
+
+   .form_input_container
+      margin-bottom: 35px
+
+      input 
+         max-width: 290px
+
+      
+
+
+   
+   
          
          
  

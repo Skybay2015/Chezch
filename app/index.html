@@ -247,7 +247,7 @@
                         Вопрос 1 из 4
                      </p>
                      <div class="quiz_progress">
-                        <span></span>
+                        <span id="quiz_progress_bar"></span>
                      </div>
                      <div class="quiz_question">
                         <h2 class="quiz_title"
@@ -324,11 +324,44 @@
                            </div>
                         </div>
                      </div>
+
+                     <div class="quiz_form_container">
+                        <h2 class="quiz_form_container_title">
+                           Оставьте номер телефона, чтобы получить резльтаты
+                           рассчета стоимости
+                        </h2>
+                        <form action="" method="POST">
+                           <div class="form_input_container">
+                              <label for="phone">
+                                 Введите номер телефона:
+                              </label>
+                              <input
+                                 type="text"
+                                 id="phone"
+                                 name="phone"
+                                 placeholder="Ваш номер телефона"
+                                 required
+                              />
+                           </div>
+                           <div class="btn_container">
+                              <button class="btn">
+                                 ПОЛУЧИТЬ РЕЗУЛЬТАТЫ
+                              </button>
+                           </div>
+                           <div class="form_bottom">
+                              <input type="checkbox" name="agree" />
+                              <p
+                                 >Согласен с
+                                 <span>политикой конфиденциальности</span></p
+                              >
+                           </div>
+                        </form>
+                     </div>
                      <div class="btn_container quiz_btn">
-                        <button class="btn">
+                        <button id="quiz_btn_next" class="btn">
                            Следующий вопрос
                         </button>
-                        <span class="quiz_previous-question">
+                        <span id="quiz_btn_prev" class="quiz_previous-question">
                            Предыдущий вопрос
                         </span>
                      </div>

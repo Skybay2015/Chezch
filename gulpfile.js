@@ -3,7 +3,7 @@ let gulp = require('gulp'),
    browserSync = require('browser-sync'),
    { reload } = browserSync,
    uglifyCss = require('gulp-uglifycss'),
-   uglifyJs = require('gulp-uglifyjs'),
+   uglifyJs = require('gulp-uglify-es').default,
    concat = require('gulp-concat'),
    rename = require('gulp-rename'),
    imagemin = require('gulp-imagemin'),
@@ -51,11 +51,7 @@ gulp.task('scripts', function() {
       .src('app/js/**/*.js')
       .pipe(concat('index.js'))
       .pipe(rename({ suffix: '.min' }))
-      .pipe(
-         uglifyJs({
-            maxLineLen: 80,
-         }),
-      )
+      .pipe(uglifyJs())
       .pipe(gulp.dest('dist/js'))
       .pipe(reload({ stream: true }));
 });
