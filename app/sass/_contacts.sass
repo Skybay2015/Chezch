@@ -58,7 +58,7 @@
       &:nth-child(4n)
          border-bottom: none
 
-      &:nth-child(7)
+      &:nth-of-type(7)
          padding-top: 43px
          padding-bottom: 43px
 
@@ -67,7 +67,11 @@
          flex-direction: column
          font-size: 20px
 
-         span:nth-child(2)
+         a 
+            color: #505050
+            text-decoration: none
+
+         a:nth-child(2)
             margin-top: 13px
 
       &_email
@@ -75,6 +79,7 @@
          font-size: 16px
          border-bottom: 1px solid rgba(16, 160, 219, 0.2)
          padding-bottom: 2px
+         text-decoration: none
 
       &_title 
          color: #24abe2

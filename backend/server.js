@@ -34,7 +34,7 @@ app.post('/quiz', (req, res) => {
 
    const mail = {
       from: 'chechMailSend@yandex.ru',
-      to: 'fedya132465@gmail.com',
+      to: 'mishka-starkov1983@mail.ru',
       subject: 'Письмо с формы со второго блока',
       html: htmlBody,
    };
@@ -81,7 +81,7 @@ app.post('/modal', (req, res) => {
 
    const mail = {
       from: 'chechMailSend@yandex.ru',
-      to: 'fedya132465@gmail.com',
+      to: 'mishka-starkov1983@mail.ru',
       subject: `Письмо с формы: ${formName}`,
       html: htmlBody,
    };

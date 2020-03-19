@@ -66,15 +66,25 @@
       &_phone 
          font-family: $first_font
          font-size: 30px
-         color: #fff
-         margin: 6px 0 5px
+         cursor: pointer
+         margin: 6px 0 5px 
+
+         a
+            color: #fff
+            text-decoration: none
 
    &_order 
-      text-decoration: none
+      cursor: pointer
       color: #10a0db
       font-size: 14px
-      border-bottom: 1px solid rgba(253, 77, 79, 0.5)
+      border-bottom: 1px solid rgb(253, 77, 79)
       padding-bottom: 4px
+      opacity: 0.5
+      transition: .3s ease-in-out
+
+      &:hover
+         transition: .3s ease-in-out
+         opacity: 1
          
    &_title 
       margin-top: 71px
@@ -135,6 +145,10 @@
    text-align: center
    position: relative
 
+   &:active
+      .btn_wrapper
+         overflow: hidden
+
 
 .btn_wrapper 
    position: relative
@@ -168,10 +182,15 @@
    outline: none
    cursor: pointer
 
+   
+         
+
+   &:hover
+      background-image: linear-gradient(to top, #ff4f51 0%, #ffa6a7 100%)
+
    a 
       color: #ffffff
       text-decoration: none
-
 
    &:before
       content: ''

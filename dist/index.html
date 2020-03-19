@@ -6,7 +6,7 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <link rel="stylesheet" href="./css/fonts.css" />
       <link rel="stylesheet" href="./css/index.min.css" />
-      <title>Hello world!</title>
+      <title>Chech</title>
    </head>
 
    <body>
@@ -142,11 +142,13 @@
                            Бесплатно по России
                         </p>
                         <p class="hero_contacts-container_phone">
-                           +7 (800) 511-81-55
+                           <a href="tel:+7 (800) 511-81-55"
+                              >+7 (800) 511-81-55</a
+                           >
                         </p>
-                        <a id="hero_order" class="hero_order" href="#">
+                        <span id="hero_order" class="hero_order">
                            Заказать обратный звонок
-                        </a>
+                        </span>
                      </div>
                   </div>
                </div>
@@ -379,18 +381,20 @@
                               />
                               <label for="agreeQuiz"
                                  >Согласен с
-                                 <span
+                                 <span class="confidential"
                                     >политикой конфиденциальности</span
                                  ></label
                               >
                            </div>
                         </form>
                      </div>
-                     <div class="btn_container quiz_btn">
-                        <div class="btn_wrapper">
-                           <button id="quiz_btn_next" class="btn">
-                              Следующий вопрос
-                           </button>
+                     <div class="quiz_btn">
+                        <div class="btn_container">
+                           <div class="btn_wrapper">
+                              <button id="quiz_btn_next" class="btn">
+                                 Следующий вопрос
+                              </button>
+                           </div>
                         </div>
                         <span id="quiz_btn_prev" class="quiz_previous-question">
                            Предыдущий вопрос
@@ -1592,20 +1596,23 @@
                   <div class="contacts_item">
                      <img src="./img/contacts/phone-call.svg" alt="phone" />
                      <div class="contacts_item_info">
-                        <span>
+                        <a href="tel:+7 (800) 511-77-44">
                            +7 (800) 511-77-44
-                        </span>
-                        <span>
+                        </a>
+                        <a href="tel:+7 (987) 001-52-24">
                            +7 (987) 001-52-24
-                        </span>
+                        </a>
                      </div>
                   </div>
 
                   <div class="contacts_item">
                      <img src="./img/contacts/email.svg" alt="email" />
-                     <span class="contacts_item_email">
+                     <a
+                        href="mailto:info@domains.com"
+                        class="contacts_item_email"
+                     >
                         info@domains.com
-                     </span>
+                     </a>
                   </div>
                </div>
 
@@ -1665,7 +1672,9 @@
                         />
                         <label for="agree"
                            >Согласен с
-                           <span>политикой конфиденциальности</span></label
+                           <span class="confidential"
+                              >политикой конфиденциальности</span
+                           ></label
                         >
                      </div>
                   </form>
@@ -1687,17 +1696,20 @@
                   <div class="contacts_item">
                      <img src="./img/contacts/phone-call.svg" alt="phone" />
                      <div class="contacts_item_info">
-                        <span>
+                        <a href="tel:+420 777 024 510">
                            +420 777 024 510
-                        </span>
+                        </a>
                      </div>
                   </div>
 
                   <div class="contacts_item">
                      <img src="./img/contacts/email.svg" alt="email" />
-                     <span class="contacts_item_email">
+                     <a
+                        href="mailto:info@domains.com"
+                        class="contacts_item_email"
+                     >
                         info@domains.com
-                     </span>
+                     </a>
                   </div>
                </div>
             </div>
@@ -1857,7 +1869,9 @@
                   <input type="checkbox" id="agreeModal" name="agree" checked />
                   <label for="agreeModal"
                      >Согласен с
-                     <span>политикой конфиденциальности</span></label
+                     <span class="confidential"
+                        >политикой конфиденциальности</span
+                     ></label
                   >
                </div>
             </form>
@@ -1923,7 +1937,9 @@
                   />
                   <label for="agreeModalСonsultation"
                      >Согласен с
-                     <span>политикой конфиденциальности</span></label
+                     <span class="confidential"
+                        >политикой конфиденциальности</span
+                     ></label
                   >
                </div>
             </form>
@@ -1989,10 +2005,24 @@
                   />
                   <label for="agreeModalСonsultation"
                      >Согласен с
-                     <span>политикой конфиденциальности</span></label
+                     <span class="confidential"
+                        >политикой конфиденциальности</span
+                     ></label
                   >
                </div>
             </form>
+         </div>
+      </div>
+
+      <div class="modal" id="confidential_modal">
+         <div class="modal-content">
+            <img class="close" src="./img/close menu.svg" alt="close menu" />
+            <p class="modal-content_info">
+               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+               Consequuntur nobis ducimus, culpa dolorem inventore commodi! Ad,
+               suscipit, dolorum atque exercitationem alias aut illum corrupti
+               perspiciatis assumenda ea ducimus aliquam repellat?
+            </p>
          </div>
       </div>
 

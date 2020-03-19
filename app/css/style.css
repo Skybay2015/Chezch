@@ -6,6 +6,8 @@
 
 .header-item { text-decoration: none; text-transform: uppercase; font-family: "Fira Sans Condensed"; color: #74929e; transition: .3s ease-in-out; }
 
+.header-item-selected { color: #20a9e1; }
+
 .header-item:hover { transition: .3s ease-in-out; color: #20a9e1; }
 
 .hero { padding: 20px 0 69px; background: center/cover no-repeat url("../img/hero/bgHero.png"); }
@@ -38,9 +40,13 @@
 
 .hero_contacts-container_info { color: #fff; font-size: 14px; }
 
-.hero_contacts-container_phone { font-family: "Fira Sans Condensed"; font-size: 30px; color: #fff; margin: 6px 0 5px; }
+.hero_contacts-container_phone { font-family: "Fira Sans Condensed"; font-size: 30px; cursor: pointer; margin: 6px 0 5px; }
 
-.hero_order { text-decoration: none; color: #10a0db; font-size: 14px; border-bottom: 1px solid rgba(253, 77, 79, 0.5); padding-bottom: 4px; }
+.hero_contacts-container_phone a { color: #fff; text-decoration: none; }
+
+.hero_order { cursor: pointer; color: #10a0db; font-size: 14px; border-bottom: 1px solid #fd4d4f; padding-bottom: 4px; opacity: 0.5; transition: .3s ease-in-out; }
+
+.hero_order:hover { transition: .3s ease-in-out; opacity: 1; }
 
 .hero_title { margin-top: 71px; font-family: "Fira Sans Condensed"; font-size: 48px; font-weight: 500; color: #ffffff; text-align: center; }
 
@@ -62,11 +68,15 @@
 
 .btn_container { z-index: 1; text-align: center; position: relative; }
 
+.btn_container:active .btn_wrapper { overflow: hidden; }
+
 .btn_wrapper { position: relative; display: inline-block; }
 
 .btn_wrapper:after { content: ''; width: 100%; height: 100%; box-shadow: 0 3px 27px 1px rgba(253, 105, 107, 0.52); border-radius: 14px; background-color: #aa3435; position: absolute; left: 0; bottom: -6px; z-index: -1; }
 
 .btn { position: relative; box-shadow: inset 0 -1px 0 #fd6264; border-radius: 4px; background-image: linear-gradient(to top, #fd4d4f 0%, #fd8687 100%); color: #ffffff; font-family: "Fira Sans Condensed"; text-transform: uppercase; text-shadow: 0 1px 0 #d94244; border: none; padding: 29px 42px; font-size: 16px; overflow: hidden; outline: none; cursor: pointer; }
+
+.btn:hover { background-image: linear-gradient(to top, #ff4f51 0%, #ffa6a7 100%); }
 
 .btn a { color: #ffffff; text-decoration: none; }
 
@@ -111,13 +121,15 @@
 
 .quiz_title { color: #505050; font-size: 24px; font-family: "Raleway"; text-align: center; padding: 33px 0 35px; }
 
-.quiz_btn { text-align: left; margin-top: 17px; }
+.quiz_btn { text-align: left; margin-top: 17px; display: flex; align-items: center; }
 
 .quiz_btn button { padding: 25px 85px 27px; }
 
 .quiz_btn .btn_wrapper { margin-right: 29px; }
 
-.quiz_previous-question { font-family: "Raleway"; opacity: 0.5; color: #505050; border-bottom: 1px solid rgba(80, 80, 80, 0.1); cursor: pointer; }
+.quiz_previous-question { font-family: "Raleway"; opacity: 0.5; color: #505050; border-bottom: 1px solid rgba(80, 80, 80, 0.1); cursor: pointer; transition: .3s ease-in-out; }
+
+.quiz_previous-question:hover { opacity: 1; color: #10a0db; transition: .3s ease-in-out; }
 
 .quiz_form_container { margin-top: 33px; }
 
@@ -375,13 +387,15 @@
 
 .contacts_item:nth-child(4n) { border-bottom: none; }
 
-.contacts_item:nth-child(7) { padding-top: 43px; padding-bottom: 43px; }
+.contacts_item:nth-of-type(7) { padding-top: 43px; padding-bottom: 43px; }
 
 .contacts_item_info { display: flex; flex-direction: column; font-size: 20px; }
 
-.contacts_item_info span:nth-child(2) { margin-top: 13px; }
+.contacts_item_info a { color: #505050; text-decoration: none; }
 
-.contacts_item_email { color: #10a0db; font-size: 16px; border-bottom: 1px solid rgba(16, 160, 219, 0.2); padding-bottom: 2px; }
+.contacts_item_info a:nth-child(2) { margin-top: 13px; }
+
+.contacts_item_email { color: #10a0db; font-size: 16px; border-bottom: 1px solid rgba(16, 160, 219, 0.2); padding-bottom: 2px; text-decoration: none; }
 
 .contacts_item_title { color: #24abe2; font-family: "Raleway"; font-size: 20px; line-height: 30px; margin-bottom: 30px; }
 

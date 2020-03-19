@@ -8,6 +8,12 @@
       });
    });
 
+   $('.confidential').each(function() {
+      $(this).on('click', function() {
+         $('#confidential_modal').css('display', 'block');
+      });
+   });
+
    $('.consultation_btn').each(function() {
       $(this).on('click', function() {
          $('#consultation_modal').css('display', 'block');
