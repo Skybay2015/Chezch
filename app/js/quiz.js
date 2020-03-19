@@ -1,4 +1,5 @@
 (function() {
+   // Состояние нашего теста
    const quiz = {
       questions: {
          1: {
@@ -11,7 +12,7 @@
             },
          },
          2: {
-            question: 'Выберете для каких целей планируете переезд в чехию?',
+            question: 'Выберете для каких целей планируете переезд в Чехию?',
             answers: {
                0: 'Иммиграция',
                1: 'Для работы',
@@ -39,7 +40,10 @@
    // При загрузке сайта зарендерить 1 вопрос
    $(document).ready(function() {
       const { questions, activeQuestion } = quiz;
-      $('.quiz_title').text(questions[activeQuestion].question);
+      $('.quiz_number').text(`Вопрос ${activeQuestion} из 4`);
+      if (quiz.activeQuestion < 4) {
+         $('.quiz_title').text(quiz.questions[activeQuestion].question);
+      }
 
       // Cпрятать кнопку пред вопроса и форму обратной свзяи
       $('#quiz_btn_prev').hide();
@@ -50,14 +54,18 @@
          $(this).text(questions[activeQuestion].answers[index]);
          $(this)
             .parent()
-            // Добавлять
-            .on('click', function (e) {
-               quiz.answer = questions[activeQuestion].answers[index];
+            // Добавлять ответ в переменную answers
+            .on('click', function(e) {
+               quiz.answer = questions[quiz.activeQuestion].answers[index];
 
-               unhighlightElement()
-
-               $(this).addClass('selected')
+               unhighlightElement();
+               // Подсветить выбранный элемент
+               $(this).addClass('selected');
             });
+         $('.quiz_answer')
+            .last()
+            .parent()
+            .hide();
       });
    });
 
@@ -65,7 +73,8 @@
       let { activeQuestion } = quiz;
       const { answers } = quiz;
 
-      unhighlightElement()
+      unhighlightElement();
+      console.log(quiz.answers);
 
       if (quiz.activeQuestion === 3) {
          quiz.finished = true;
@@ -76,6 +85,10 @@
          quiz.answer = '';
 
          quiz.activeQuestion = ++activeQuestion;
+
+         if (activeQuestion < 4) {
+            $('.quiz_title').text(quiz.questions[activeQuestion].question);
+         }
 
          $('#quiz_progress_bar').css('maxWidth', `${activeQuestion * 25}%`);
 
@@ -96,12 +109,18 @@
    $('#quiz_btn_prev').on('click', () => {
       let { activeQuestion } = quiz;
 
-      unhighlightElement()
+      unhighlightElement();
+
+      console.log(quiz.answers);
 
       quiz.answer = '';
       quiz.answers.pop();
 
       quiz.activeQuestion = --activeQuestion;
+
+      if (activeQuestion < 4) {
+         $('.quiz_title').text(quiz.questions[activeQuestion].question);
+      }
 
       $('.quiz_number').text(`Вопрос ${activeQuestion} из 4`);
 
@@ -114,15 +133,47 @@
       renderQuestions(activeQuestion);
    });
 
-   function unhighlightElement () {
+   $('#quiz_form').submit(function(e) {
+      e.preventDefault();
+      const phone = $('#quiz_form')[0].phone.value;
+      const agree = $('#quiz_form')[0].agreeQuiz.checked;
+      const actionUrl = e.currentTarget.action;
+
+      if (agree) {
+         $.ajax({
+            url: actionUrl,
+            type: 'post',
+            dataType: 'application/json',
+            data: {
+               answers: quiz.answers,
+               phone,
+            },
+         });
+      }
+   });
+
+   function unhighlightElement() {
       $('.quiz_answer').each(function() {
-         $(this).parent().removeClass('selected')
-      })
+         $(this)
+            .parent()
+            .removeClass('selected');
+      });
    }
 
    function renderQuestions(activeQuestion) {
       $('.quiz_answer').each(function(index) {
          $(this).text(quiz.questions[activeQuestion].answers[index]);
+         if (activeQuestion === 2) {
+            $('.quiz_answer')
+               .last()
+               .parent()
+               .show();
+         } else {
+            $('.quiz_answer')
+               .last()
+               .parent()
+               .hide();
+         }
       });
    }
 })();

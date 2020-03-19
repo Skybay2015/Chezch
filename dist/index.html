@@ -144,7 +144,7 @@
                         <p class="hero_contacts-container_phone">
                            +7 (800) 511-81-55
                         </p>
-                        <a class="hero_order" href="#">
+                        <a id="hero_order" class="hero_order" href="#">
                            Заказать обратный звонок
                         </a>
                      </div>
@@ -221,14 +221,14 @@
 
                <div class="btn_container">
                   <div class="btn_wrapper">
-                     <button class="btn">
+                     <button class="btn btn_price">
                         Узнать стоимость и сроки за 1 клик
                      </button>
                   </div>
                </div>
 
                <div class="bottom_info">
-                  <span class="hero_order">
+                  <span class="hero_order consultation_btn">
                      Получить бесплатную консультацию
                   </span>
                </div>
@@ -245,14 +245,30 @@
             <div class="quiz_content">
                <div class="quiz_main-container">
                   <div class="quiz_item">
-                     <p class="quiz_number">
-                     </p>
+                     <p class="quiz_number"> </p>
                      <div class="quiz_progress">
                         <span id="quiz_progress_bar"></span>
                      </div>
                      <div class="quiz_question">
                         <h2 class="quiz_title"></h2>
                         <div class="quiz_answers-container">
+                           <div class="quiz_answer-item">
+                              <svg
+                                 class="quiz_answer-item_icon"
+                                 width="30px"
+                                 height="30px"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 52 52"
+                              >
+                                 <path
+                                    d="M26 0C11.664 0 0 11.663 0 26s11.664 26 26 26 26-11.663 26-26S40.336 0 26 0zm0 50C12.767 50 2 39.233 2 26S12.767 2 26 2s24 10.767 24 24-10.767 24-24 24z"
+                                 />
+                                 <path
+                                    d="M38.252 15.336l-15.369 17.29-9.259-7.407a1 1 0 00-1.249 1.562l10 8a.999.999 0 001.373-.117l16-18a1 1 0 10-1.496-1.328z"
+                                 />
+                              </svg>
+                              <span class="quiz_answer"></span>
+                           </div>
                            <div class="quiz_answer-item">
                               <svg
                                  class="quiz_answer-item_icon"
@@ -329,7 +345,11 @@
                            Оставьте номер телефона, чтобы получить резльтаты
                            рассчета стоимости
                         </h3>
-                        <form action="" method="POST">
+                        <form
+                           id="quiz_form"
+                           action="http://localhost:8000/quiz"
+                           method="POST"
+                        >
                            <div class="form_input_container">
                               <label for="phoneQuiz">
                                  Введите номер телефона:
@@ -344,17 +364,24 @@
                            </div>
                            <div class="btn_container">
                               <div class="btn_wrapper">
-                                 <button class="btn">
+                                 <button class="btn submit">
                                     ПОЛУЧИТЬ РЕЗУЛЬТАТЫ
                                  </button>
                               </div>
                            </div>
 
                            <div class="form_bottom">
-                              <input type="checkbox" name="agree" />
-                              <p
+                              <input
+                                 type="checkbox"
+                                 id="agreeQuiz"
+                                 name="agreeQuiz"
+                                 checked
+                              />
+                              <label for="agreeQuiz"
                                  >Согласен с
-                                 <span>политикой конфиденциальности</span></p
+                                 <span
+                                    >политикой конфиденциальности</span
+                                 ></label
                               >
                            </div>
                         </form>
@@ -628,7 +655,7 @@
             </h3>
             <div class="btn_container">
                <div class="btn_wrapper">
-                  <button class="btn">
+                  <button class="btn consultation_btn">
                      ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ!
                   </button>
                </div>
@@ -674,7 +701,7 @@
             </h3>
             <div class="btn_container">
                <div class="btn_wrapper">
-                  <button class="btn">
+                  <button class="btn consultation_btn">
                      ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ!
                   </button>
                </div>
@@ -710,7 +737,7 @@
                                  <img
                                     class="reviews_slide_icon"
                                     src="./img/reviews/play-button.svg"
-                                    alt='icon'
+                                    alt="icon"
                                  />
                               </div>
                            </div>
@@ -1171,14 +1198,14 @@
 
             <div class="btn_container">
                <div class="btn_wrapper">
-                  <button class="btn">
+                  <button class="btn btn_price">
                      Узнать стоимость и сроки за 1 клик
                   </button>
                </div>
             </div>
 
             <div class="bottom_info">
-               <span class="hero_order">
+               <span class="hero_order consultation_btn">
                   Получить бесплатную консультацию
                </span>
             </div>
@@ -1263,7 +1290,9 @@
                   alt="Family"
                />
             </div>
-            <h2 id="documents" class="subtitle">Вот какие документы Вы получите в итоге: </h2>
+            <h2 id="documents" class="subtitle"
+               >Вот какие документы Вы получите в итоге:
+            </h2>
          </div>
          <div class="vantage_main-video-container">
             <div class="vantage_video-slider">
@@ -1407,7 +1436,7 @@
             </div>
             <div class="btn_container">
                <div class="btn_wrapper">
-                  <button class="btn">
+                  <button class="btn btn_price">
                      Узнать стоимость и сроки за 1 клик
                   </button>
                </div>
@@ -1532,7 +1561,7 @@
             </div>
             <div class="btn_container">
                <div class="btn_wrapper">
-                  <button class="btn">
+                  <button class="btn consultation_btn">
                      ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ!
                   </button>
                </div>
@@ -1591,7 +1620,12 @@
                      в течение 1-ой минуты
                   </p>
 
-                  <form action="" method="POST">
+                  <form
+                     class="modal_form"
+                     action="http://localhost:8000/modal"
+                     name="contactsForm"
+                     method="POST"
+                  >
                      <div class="form_input_container">
                         <label for="question">
                            Введите текст вопроса:
@@ -1599,7 +1633,7 @@
                         <input
                            type="text"
                            id="question"
-                           name="question"
+                           name="name"
                            placeholder="Ваш вопрос"
                         />
                      </div>
@@ -1617,18 +1651,22 @@
                      </div>
                      <div class="btn_container">
                         <div class="btn_wrapper">
-                           <button
-                              type="submit"
-                              class="btn"
-                           >
+                           <button type="submit" class="btn submit">
                               Задать вопрос!
                            </button>
                         </div>
                      </div>
                      <div class="form_bottom">
-                        <input type="checkbox" name="agree" />
-                        <p>Согласен с
-                           <span>политикой конфиденциальности</span></p>
+                        <input
+                           type="checkbox"
+                           id="agree"
+                           name="agree"
+                           checked
+                        />
+                        <label for="agree"
+                           >Согласен с
+                           <span>политикой конфиденциальности</span></label
+                        >
                      </div>
                   </form>
                </div>
@@ -1746,7 +1784,7 @@
                </a>
             </div>
             <a href="#hero" class="go_up">
-               <img src="./img/contacts/up-arrow.svg" alt='arrow'/>
+               <img src="./img/contacts/up-arrow.svg" alt="arrow" />
                Наверх
             </a>
          </div>
@@ -1765,11 +1803,201 @@
          </div>
       </footer>
 
-      
+      <div class="modal" id="question_modal">
+         <div class="modal-content">
+            <img class="close" src="./img/close menu.svg" alt="close menu" />
+            <h3 class="contacts_item_title">
+               Есть вопросы? <br />
+               Закажите обратный звонок!
+            </h3>
+
+            <p class="contacts_item_subtitle">
+               Заполните форму и мы ответим <br />
+               в течение 1-ой минуты
+            </p>
+            <form
+               name="questionForm"
+               class="modal_form"
+               action="http://localhost:8000/modal"
+               method="POST"
+            >
+               <div class="form_input_container">
+                  <label for="questionName">
+                     Введите Ваше имя (не объязательно)
+                  </label>
+                  <input
+                     type="text"
+                     id="questionName"
+                     name="name"
+                     class="modal_name"
+                     placeholder="Ваше имя"
+                  />
+               </div>
+               <div class="form_input_container">
+                  <label for="phoneQuestion">
+                     Введите номер телефона:
+                  </label>
+                  <input
+                     type="text"
+                     id="phoneQuestion"
+                     name="phone"
+                     class="modal_phone"
+                     placeholder="Ваш номер телефона"
+                     required
+                  />
+               </div>
+               <div class="btn_container">
+                  <div class="btn_wrapper">
+                     <button type="submit" class="btn submit">
+                        Задать вопрос!
+                     </button>
+                  </div>
+               </div>
+               <div class="form_bottom">
+                  <input type="checkbox" id="agreeModal" name="agree" checked />
+                  <label for="agreeModal"
+                     >Согласен с
+                     <span>политикой конфиденциальности</span></label
+                  >
+               </div>
+            </form>
+         </div>
+      </div>
+
+      <div class="modal" id="consultation_modal">
+         <div class="modal-content">
+            <img class="close" src="./img/close menu.svg" alt="close menu" />
+            <h3 class="contacts_item_title">
+               Есть вопросы? <br />
+               Закажите обратный звонок!
+            </h3>
+
+            <p class="contacts_item_subtitle">
+               Заполните форму и мы ответим <br />
+               в течение 1-ой минуты
+            </p>
+            <form
+               name="consultationForm"
+               class="modal_form"
+               action="http://localhost:8000/modal"
+               method="POST"
+            >
+               <div class="form_input_container">
+                  <label for="consultationName">
+                     Введите Ваше имя (не объязательно)
+                  </label>
+                  <input
+                     type="text"
+                     id="consultationName"
+                     name="name"
+                     class="modal_name"
+                     placeholder="Ваш вопрос"
+                  />
+               </div>
+               <div class="form_input_container">
+                  <label for="consultationPhone">
+                     Введите номер телефона:
+                  </label>
+                  <input
+                     type="text"
+                     id="consultationPhone"
+                     name="phone"
+                     class="modal_phone"
+                     placeholder="Ваш номер телефона"
+                     required
+                  />
+               </div>
+               <div class="btn_container">
+                  <div class="btn_wrapper">
+                     <button type="submit" class="btn submit">
+                        Получить консультацию!
+                     </button>
+                  </div>
+               </div>
+               <div class="form_bottom">
+                  <input
+                     type="checkbox"
+                     id="agreeModalСonsultation"
+                     name="agree"
+                     checked
+                  />
+                  <label for="agreeModalСonsultation"
+                     >Согласен с
+                     <span>политикой конфиденциальности</span></label
+                  >
+               </div>
+            </form>
+         </div>
+      </div>
+
+      <div class="modal" id="price_modal">
+         <div class="modal-content">
+            <img class="close" src="./img/close menu.svg" alt="close menu" />
+            <h3 class="contacts_item_title">
+               Перезвоним и рассчитаем <br />
+               стоимость и сроки переезда
+            </h3>
+
+            <p class="contacts_item_subtitle">
+               Заполните форму и мы ответим <br />
+               в течение 1-ой минуты
+            </p>
+            <form
+               name="priceForm"
+               class="modal_form"
+               action="http://localhost:8000/modal"
+               method="POST"
+            >
+               <div class="form_input_container">
+                  <label for="priceName">
+                     Введите Ваше имя (не объязательно)
+                  </label>
+                  <input
+                     class="modal_name"
+                     type="text"
+                     id="priceName"
+                     name="name"
+                     placeholder="Ваш вопрос"
+                  />
+               </div>
+               <div class="form_input_container">
+                  <label for="pricePhone">
+                     Введите номер телефона:
+                  </label>
+                  <input
+                     class="modal_phone"
+                     type="text"
+                     id="pricePhone"
+                     name="phone"
+                     placeholder="Ваш номер телефона"
+                     required
+                  />
+               </div>
+               <div class="btn_container">
+                  <div class="btn_wrapper">
+                     <button type="submit" class="btn submit">
+                        УЗНАТЬ СТОИМОСТЬ И СРОКИ!
+                     </button>
+                  </div>
+               </div>
+               <div class="form_bottom">
+                  <input
+                     type="checkbox"
+                     id="agreeModalСonsultation"
+                     name="agree"
+                     checked
+                  />
+                  <label for="agreeModalСonsultation"
+                     >Согласен с
+                     <span>политикой конфиденциальности</span></label
+                  >
+               </div>
+            </form>
+         </div>
+      </div>
 
       <script src="./js/jquery.min.js"></script>
       <script src="./js/slick.min.js"></script>
       <script src="./js/index.min.js"></script>
-
    </body>
 </html>
