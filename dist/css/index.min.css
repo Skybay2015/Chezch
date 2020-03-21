@@ -16,7 +16,7 @@ table{border-collapse:collapse;border-spacing:0}.slick-slider{position:relative;
 .header .bottom_info{display:none;margin-top:0;text-align:left}.header .bottom_info span{border-bottom:1px solid #10a0db}
 .header-content{display:flex;justify-content:space-between;padding:0 6px;font-size:12px}
 .header_social-network-container{display:none}.header-item{text-decoration:none;text-transform:uppercase;font-family:"Fira Sans Condensed";color:#74929e;transition:.3s ease-in-out}
-.header-item-selected{color:#20a9e1}.header-item:hover{transition:.3s ease-in-out;color:#20a9e1}
+.header-item-selected{color:#20a9e1 !important}.header-item:hover{transition:.3s ease-in-out;color:#20a9e1}
 .hamburger_container{display:none;position:absolute;right:20px;top:50%;transform:translate(0,-50%)}
 .hamburger_container .hamburger{position:relative;width:25px;height:2px;background-color:#fff;transition:.3s ease-in-out}
 .hamburger_container .hamburger:after{content:'';position:absolute;bottom:-6px;left:0;display:block;background-color:#fff;width:25px;height:2px;transition:.3s ease-in-out}
@@ -25,7 +25,7 @@ table{border-collapse:collapse;border-spacing:0}.slick-slider{position:relative;
 .hamburger-active.hamburger:before{transition:.3s ease-in-out;transform:rotate(45deg);top:0}
 .hamburger-active.hamburger:after{transition:.3s ease-in-out;top:0;transform:rotate(-45deg)}
 @media(max-width:640px){.hamburger_container{display:block}.header .wrapper{position:relative}
-.header .bottom_info{display:block}.header_main_container{position:absolute;display:flex;flex-direction:column;align-items:center;top:27px;left:0;right:0;padding:30px 0;background-color:#0c3a4c;box-shadow:0 3px 18px 3px rgba(4,22,29,0.14)}
+.header-item:hover{color:#74929e}.header .bottom_info{display:block}.header_main_container{position:absolute;display:flex;flex-direction:column;align-items:center;top:27px;left:0;right:0;padding:30px 0;background-color:#0c3a4c;box-shadow:0 3px 18px 3px rgba(4,22,29,0.14)}
 .header_main_container .hero_social-network{margin-right:20px}.header_main_container .hero_social-network:first-of-type{margin-right:15px}
 .header_main_container .hero_social-network:last-of-type{margin-right:0}.header_main_container_close{display:none !important}
 .header-item{margin-bottom:18px;font-size:16px}.header-content{flex-direction:column;justify-content:center}
@@ -138,8 +138,8 @@ table{border-collapse:collapse;border-spacing:0}.slick-slider{position:relative;
 .reviews_slide_info{color:#fff;opacity:.35;font-family:"Fira Sans Condensed";border-bottom:1px solid #fd4d4f;line-height:21px;transition:.3s ease-in-out}
 .reviews_previous-button,.reviews_next-button{top:32%}.second_subtitle{position:relative;max-width:717px;width:100%;margin:5px auto 0;color:#d3d3d3;font-family:"Raleway";font-size:20px;line-height:30px;text-align:center;padding-bottom:35px}
 .second_subtitle:after{content:'';position:absolute;background-color:#10a0db;height:1px;width:67px;left:50%;transform:translate(-50%,0);bottom:0}
-.vantage{padding:69px 0 75px}.vantage .title:after{content:none}.vantage .second_subtitle{color:#7a7a7a}
-.vantage_main-container{position:relative;padding:4px 0 35px 54px;background:no-repeat center/cover url(../img/vantage/bg.png)}
+@media(max-width:425px){.second_subtitle{font-size:18px}}.vantage{padding:69px 0 75px}
+.vantage .title:after{content:none}.vantage .second_subtitle{color:#7a7a7a}.vantage_main-container{position:relative;padding:4px 0 35px 54px;background:no-repeat center/cover url(../img/vantage/bg.png)}
 .vantage_container{display:flex;flex-wrap:wrap;max-width:616px;width:100%}.vantage_item{margin-right:30px;margin-top:31px;max-width:234px;padding:31px 31px 33px 28px;border-radius:4px 4px 4px 1px;background-color:#fff}
 .vantage_item:nth-of-type(2n){margin-right:0}.vantage_item_top-container{display:flex;align-items:center;margin-bottom:27px}
 .vantage_item_top-container img{width:60px;height:60px}.vantage_item_title{color:#505050;font-size:18px;font-family:"Fira Sans Condensed";text-transform:uppercase;margin-left:20px}

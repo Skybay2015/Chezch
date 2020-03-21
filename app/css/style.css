@@ -12,7 +12,7 @@
 
 .header-item { text-decoration: none; text-transform: uppercase; font-family: "Fira Sans Condensed"; color: #74929e; transition: .3s ease-in-out; }
 
-.header-item-selected { color: #20a9e1; }
+.header-item-selected { color: #20a9e1 !important; }
 
 .header-item:hover { transition: .3s ease-in-out; color: #20a9e1; }
 
@@ -32,6 +32,7 @@
 
 @media (max-width: 640px) { .hamburger_container { display: block; }
   .header .wrapper { position: relative; }
+  .header-item:hover { color: #74929e; }
   .header .bottom_info { display: block; }
   .header_main_container { position: absolute; display: flex; flex-direction: column; align-items: center; top: 27px; left: 0; right: 0; padding: 30px 0; background-color: #0c3a4c; box-shadow: 0 3px 18px 3px rgba(4, 22, 29, 0.14); }
   .header_main_container .hero_social-network { margin-right: 20px; }
@@ -375,6 +376,8 @@
 .second_subtitle { position: relative; max-width: 717px; width: 100%; margin: 5px auto 0; color: #d3d3d3; font-family: "Raleway"; font-size: 20px; line-height: 30px; text-align: center; padding-bottom: 35px; }
 
 .second_subtitle:after { content: ''; position: absolute; background-color: #10a0db; height: 1px; width: 67px; left: 50%; transform: translate(-50%, 0); bottom: 0; }
+
+@media (max-width: 425px) { .second_subtitle { font-size: 18px; } }
 
 .vantage { padding: 69px 0 75px; }
 
