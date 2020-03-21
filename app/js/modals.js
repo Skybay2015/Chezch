@@ -10,25 +10,25 @@
 
    $('.confidential').each(function() {
       $(this).on('click', function() {
-         $('#confidential_modal').css('display', 'block');
+         $('#confidential_modal').css('display', 'flex');
       });
    });
 
    $('.consultation_btn').each(function() {
       $(this).on('click', function() {
-         $('#consultation_modal').css('display', 'block');
+         $('#consultation_modal').css('display', 'flex');
          $('body').css('overflow', 'hidden');
       });
    });
 
    $('#hero_order').on('click', function() {
-      $('#question_modal').css('display', 'block');
+      $('#question_modal').css('display', 'flex');
       $('body').css('overflow', 'hidden');
    });
 
    $('.btn_price').each(function() {
       $(this).on('click', function() {
-         $('#price_modal').css('display', 'block');
+         $('#price_modal').css('display', 'flex');
          $('body').css('overflow', 'hidden');
       });
    });

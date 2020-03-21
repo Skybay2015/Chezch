@@ -4,7 +4,7 @@
    padding: 68px 0 73px
   
    &_content 
-      background: url(../img/quiz/accounting_services_.png) no-repeat left, url(../img/quiz/accounting_servicesR.png) no-repeat right;
+      background: url(../img/quiz/accounting_services_.png) no-repeat left, url(../img/quiz/accounting_servicesR.png) no-repeat right
 
    &_answers-container
       display: flex
@@ -18,6 +18,7 @@
       color: #24ace3
       transition: .3s ease-in-out
       font-size: 14px
+      cursor: pointer
 
    &_answer-item 
       display: flex
@@ -31,6 +32,7 @@
       border: 1px solid #f9f9f9
       max-width: 188px
       width: 100%
+      cursor: pointer
 
       &:hover
          box-shadow: 0 3px 18px 3px rgba(253, 105, 107, 0.14)
@@ -83,14 +85,14 @@
       position: relative
       max-width: 100%
       width: 100%
-      height: 4px
+      height: 2px
       background-color: #f9f9f9
 
       span 
          position: absolute
          max-width: 25%
          width: 100%
-         height: 4px
+         height: inherit
          background-color: #fd4d4f
          transition: all .3s ease-in-out
 
@@ -198,6 +200,7 @@
 
    .quiz_title 
       font-size: 20px
+      line-height: 26px
 
    .quiz_answer-item
       max-width: 37%
@@ -208,17 +211,33 @@
       flex-wrap: nowrap
       flex-direction: column
 
+
+
    .quiz_answer-item
       max-width: 90%
 
+   
+
    .quiz_btn
       flex-direction: column
+
+      
+      
 
       .btn_wrapper
          margin-right: 0
 
    .quiz_previous-question
       margin-top: 25px
+
+@media (max-width: 517px)
+   .btn_container, .btn_wrapper, .btn
+      width: 100%
+
+   .quiz_btn
+      .btn
+         padding: 19px 14px
+
 
 @media (max-width: 425px)
    .title 
@@ -238,4 +257,8 @@
 
    .quiz_form_container_title 
       font-size: 18px
+      line-height: 26px
 
+@media (max-width: 366px)
+   .quiz_br
+      display: none

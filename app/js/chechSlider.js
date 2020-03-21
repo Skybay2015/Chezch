@@ -8,7 +8,6 @@
          dots: true,
          appendDots: $('.chech_main-container'),
          dotsClass: 'slider-dots',
-
          responsive: [
             {
                breakpoint: 1068,
@@ -25,7 +24,7 @@
                },
             },
             {
-               breakpoint: 625,
+               breakpoint: 570,
                settings: {
                   slidesToShow: 1,
                   slidesToScroll: 1,

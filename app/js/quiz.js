@@ -104,6 +104,12 @@
       });
    });
 
+   $('#quiz_btn_next').on('click', () => {
+      if (!quiz.answer.length) {
+         alert('Выберите один из предложеных вариантов');
+      }
+   });
+
    $('#quiz_btn_prev').on('click', () => {
       let { activeQuestion } = quiz;
 

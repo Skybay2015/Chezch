@@ -24,6 +24,9 @@
    &_social-network-container
       display: none
 
+      .hero_info
+         font-family: $second_font
+
    &-item 
       text-decoration: none
       text-transform: uppercase
@@ -32,7 +35,7 @@
       transition: .3s ease-in-out
 
       &-selected 
-         color: #20a9e1!important
+         color: #20a9e1 !important
 
       &:hover
          transition: .3s ease-in-out
@@ -93,7 +96,7 @@
    top: 0
    transform: rotate(-45deg)  
 
-@media (max-width: 640px)
+@media (max-width: 734px)
    .hamburger_container
       display: block
 
@@ -111,7 +114,7 @@
       position: absolute
       display: flex
       flex-direction: column
-      align-items: center
+      align-items: flex-start
       top: 27px
       left: 0
       right: 0
@@ -138,11 +141,15 @@
    .header-content
       flex-direction: column
       justify-content: center
+      padding: 0 15px
 
    .header_social-network-container
       display: block
       margin-top: 15px
+      padding-left: 15px
 
       .hero_info:nth-child(2) 
          font-size: 11px
          max-width: 100%
+
+

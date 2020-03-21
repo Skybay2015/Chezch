@@ -74,7 +74,7 @@ app.post('/modal', (req, res) => {
 
    const htmlBody = `
    <h2>Заказан обратний звонок с формы: ${formName}</h2>
-    <p>${text}: ${req.body.name || 'Не указал  имени'}</p>
+    <p>${text}: ${req.body.name || 'Не указал(а) имени'}</p>
    <p>Номер телефона: ${req.body.phone}</p>
    `;
 

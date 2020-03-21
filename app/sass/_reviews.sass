@@ -14,11 +14,17 @@
       position: relative
       margin: 34px 0
 
+      .slider-dots
+         margin-top: 11px
+
 
 
    &_slide 
       display: flex
       flex-direction: column
+
+      a 
+         outline: none
 
 
    &_slide_photo-container 
@@ -26,7 +32,6 @@
       height: 158px
       text-align: center
       border-radius: 50%
-      border-top: 1px solid #fd4d4f
       padding: 11px
       margin-right: 23px
 
@@ -36,12 +41,34 @@
    &_slide_photo 
       position: relative
       border-radius: 50%
-      border-right: 1px solid #fd4d4f
       padding: 21px
 
-      &_img
+      &:before, &:after
+         content: ''
+         position: absolute
+         border: 1px solid #fd4d4f
+         left: -10px
+         right: -10px
+         top: -10px
+         bottom: -10px
          border-radius: 50%
+         animation: pulse 7s linear infinite
+         opacity: 0
+         z-index: -1
+
+      &:after
+         animation-delay: 5s
+
+
+      .ripplelink 
          box-shadow: 0 0 27px 8px rgba(253, 105, 107, 0.52)
+         border-radius: 50%
+
+      &_img 
+         border-radius: 50%
+         width: 100%
+         
+         
 
    &_slide_icon 
       position: absolute
@@ -91,7 +118,22 @@
       transition: .3s ease-in-out
 
    &_previous-button, &_next-button
-      top: 32%
+      top: 40%
+
+@keyframes pulse 
+   0% 
+      transform: scale(0.5)
+      opacity: 0
+ 
+   50% 
+      opacity: 1
+ 
+   100% 
+      transform: scale(1)
+      opacity: 0
+ 
+
+
 
 .second_subtitle
       position: relative
@@ -117,3 +159,4 @@
 
       @media (max-width: 425px)
          font-size: 18px
+         line-height: 26px

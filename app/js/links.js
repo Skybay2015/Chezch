@@ -38,13 +38,4 @@
      .parent().end().filter("[href='#"+id+"']").addClass("header-item-selected");
 });​
 
-   $(document).scroll(function() {
-      const bottom = $('#hero')[0].getBoundingClientRect().bottom;
-
-      if (bottom < 0) {
-         $('.go_up').css('display', 'flex');
-      } else {
-         $('.go_up').css('display', 'none');
-      }
-   });
 })();

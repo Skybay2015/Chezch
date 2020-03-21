@@ -25,6 +25,7 @@
       opacity: 0.5
       font-size: 14px
       line-height: 21px
+      margin-right: 10px
 
       
 
@@ -85,12 +86,11 @@
    &_order 
       cursor: pointer
       color: #10a0db
-      font-size: 14px
       border-bottom: 1px solid rgb(253, 77, 79)
-      opacity: 0.5
       transition: .3s ease-in-out
 
       &:hover
+         border-bottom: 1px solid transparent
          transition: .3s ease-in-out
          opacity: 1
          
@@ -158,8 +158,8 @@
    position: relative
 
    &:active
-      .btn_wrapper
-         overflow: hidden
+      .btn_wrapper:after
+         display: none
 
 
 .btn_wrapper 
@@ -235,7 +235,7 @@
       
 
    
-@media (max-width: 1020px) 
+@media (max-width: 1025px) 
    .hero_info
       max-width: 166px
       &:nth-child(2)
@@ -249,7 +249,7 @@
       &:first-of-type 
          margin-right: 5px
 
-@media (max-width: 750px)
+@media (max-width: 770px)
    .hero_top-content_item
       &:nth-of-type(2)
          flex-direction: column
@@ -278,7 +278,7 @@
             border-bottom: 1px solid rgba(232, 232, 232, 0.1)
 
 
-@media (max-width: 640px)
+@media (max-width: 734px)
    .hero
 
       .hero_top-content_item
@@ -308,6 +308,9 @@
 
    .hero_logo 
       margin-right: 17px
+
+   .btn 
+      padding: 19px 14px
       
 
    .hero
@@ -315,10 +318,16 @@
          margin-top: 41px
          font-size: 36px
          text-align: left
+         line-height: 38px
 
       .hero_subtitle
          font-size: 21px
          text-align: left
+         line-height: 31px
+
+         &:after
+            left: 0
+            transform: translate(0, 0)
 
 @media (max-width: 456px)
    .hero
@@ -336,6 +345,8 @@
             
    .hero_br
       display: none
+
+   
 
 
 @media (max-width: 375px)

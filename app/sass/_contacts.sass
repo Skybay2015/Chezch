@@ -189,38 +189,16 @@
          color: #3a6fbf
          text-decoration: underline
 
-.go_up
-   position: fixed
-   display: flex
-   flex-direction: column
-   align-items: center
-   opacity: .5
-   transition: .3s ease-in-out
-   right: 15px
-   bottom: 10px
-   text-decoration: none
-   color: #74929e
-   text-transform: uppercase
-   font-size: 12px
-
-   img 
-      width: 30px
-      height: 30px
-      margin-bottom: 10px
-
-   &:hover 
-      opacity: 1
-      transition: .3s ease-in-out
-
-
 @media (max-width:888px)
    .contacts 
 
       &_chech
          padding-bottom: 48px
+         padding-top: 36px
 
          &_adr
-            padding-bottom: 44px
+            padding-bottom: 42px
+            padding-top: 44px
    
 
    .contacts_container:not(:nth-child(2))
@@ -233,8 +211,16 @@
       flex-wrap: wrap
 
 
-@media (max-width:570px)
-
+@media (max-width: 570px)
    .contacts_container:nth-child(-n+3)
       max-width: 300px
       margin-right: 0
+
+   
+
+@media (max-width: 375px)
+   .contacts_container:nth-child(2)
+      padding: 37px 24px
+
+
+   

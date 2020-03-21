@@ -1,0 +1,35 @@
+.ripplelink .ink.animate
+   opacity: 0.5
+
+.ink 
+  display: block
+  position: absolute
+  background: rgba(255, 255, 255, 1)
+  border-radius: 100%
+  -webkit-transform: scale(0)
+  -moz-transform: scale(0)
+  -o-transform: scale(0)
+
+  z-index: 20
+
+.animate 
+   -webkit-animation: ripple 0.65s linear
+   -moz-animation: ripple 0.65s linear
+   -ms-animation: ripple 0.65s linear
+   -o-animation: ripple 0.65s linear
+   animation: ripple 0.65s linear
+
+.ripplelink
+   opacity: 1
+   position: relative
+   z-index: 0
+   overflow: hidden
+
+
+@keyframes ripple 
+   100%
+      opacity: 0 
+      transform: scale(3)
+
+
+

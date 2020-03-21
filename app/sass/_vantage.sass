@@ -12,7 +12,7 @@
    &_main-container 
       position: relative
       padding: 4px 0 35px 54px
-      background: no-repeat center/cover url(../img/vantage/bg.png)
+      background: no-repeat center/contain url("../img/vantage/bg.png"), no-repeat center/contain url('../img/vantage/bg2.png')
 
    &_container
       display: flex
@@ -102,28 +102,40 @@
          height: 92px
          padding: 10px 
          border-radius: 50%
-         border-top: 1px solid #fd4d4f
-         border-left: 1px solid #fd4d4f
+
+         &:before, &:after
+            content: ''
+            position: absolute
+            border: 1px solid #fd4d4f
+            left: -10px
+            right: -10px
+            top: -10px
+            bottom: -10px
+            border-radius: 50%
+            animation: pulse 7s linear infinite
+            opacity: 0
+            z-index: -1
+
+         &:after
+            animation-delay: 5s
 
       &_playpause_wrapper
          display: flex
          justify-content: center
          align-items: center
-         border-right: 1px solid #fd4d4f
-         border-bottom: 1px solid #fd4d4f
          border-radius: 50%
          width: 72px
          height: 71px
          margin: 10px auto 0
+         background: linear-gradient(to top,#fd4d4f 0,#fd8687 100%)
 
 
       &_playpause 
-         background: #fff
+         
          border-radius: 50%
-         border-bottom: 1px solid #fd4d4f
-         width: 51px
+         width: 61px
          display: flex
-         height: 51px
+         height: 61px
          align-items: center
          justify-content: center
 
@@ -132,7 +144,7 @@
          height: 0
          border-style: solid
          border-width: 9.5px 0 9.5px 12px
-         border-color: transparent transparent transparent #fd4d4f
+         border-color: transparent transparent transparent #fff
 
    &_main-photo-container
       position: relative
@@ -185,6 +197,9 @@
       display: none
 
    .vantage_main-container
+      background-size: cover
+
+   .vantage_main-container
       padding-left: 0
 
    .vantage_container 
@@ -194,9 +209,14 @@
    .vantage_container
       justify-content: center
 
+   .vantage_main-container
+      background: #fff
+
    .vantage_item
       max-width: 256px
       margin-right: 0
+      border: 1px solid #f0f0f0
+      margin-top: 19px
 
    .vantage_photo-item
       img 
@@ -206,14 +226,6 @@
    .vantage_main-photo-container 
       .previous-button, .next-button     
          top: 22%
-
-@media (max-width: 425px)
-   .vantage_main-container
-      background: #fff
-
-   .vantage_item
-      border: 1px solid #f0f0f0
-      margin-top: 19px
 
 
 @media (max-width: 1352px)
@@ -243,10 +255,10 @@
 @media (max-width: 1060px)
    .vantage_main-video-container 
       .previous-button
-         left: 21%
+         left: 19%
 
       .next-button
-         right: 21% 
+         right: 19% 
 
 @media (max-width: 986px)
    .vantage_main-video-container 

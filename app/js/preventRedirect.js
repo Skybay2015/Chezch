@@ -9,7 +9,9 @@
          const phone = $(this).closest('form')[0].phone.value;
          console.log(name, phone);
          if (!(checked && name.length && phone)) {
-            alert('Подтвердите соглашение с политикой конфиденциальности');
+            alert(
+               'Заполните форму и подтвердите соглашение с политикой конфиденциальности',
+            );
          } else {
             window.location.href += '/thanks.html';
          }
