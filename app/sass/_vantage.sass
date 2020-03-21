@@ -20,6 +20,7 @@
       max-width: 616px
       width: 100%
 
+
    &_item 
       margin-right: 30px
       margin-top: 31px
@@ -72,25 +73,11 @@
 
    &_video-item
       position: relative
-      margin: 34px 0 0
-      height: 319px
 
-      img 
+      &_video
+         display: block
+         margin: 0 auto
          height: 100%
-         width: 100%
-
-
-      &_screen
-         position: absolute
-         background: #ffffff
-         opacity: .7
-         width: 100%
-         height: 100%
-         top: 0
-         left: 0
-         bottom: 0
-         right: 0
-         z-index: 99
 
       
       &_playpause_container
@@ -162,6 +149,7 @@
 
 
 
+
    &_photo-item 
       img 
          border: 1px solid transparent
@@ -175,10 +163,6 @@
    .subtitle 
       color: #505050
       margin-top: 16px
-
-   .slick-current
-      .vantage_video-item_screen
-         display: none
 
 @media (max-width: 1096px)
    .vantage_img

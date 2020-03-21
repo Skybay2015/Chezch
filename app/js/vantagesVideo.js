@@ -1,9 +1,9 @@
 (function() {
    $(document).ready(function() {
       $('.vantage_video-slider').slick({
-         slidesToShow: 3,
-         centerMode: true,
-         variableWidth: true,
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         adaptiveHeight: true,
          prevArrow: $('.vantage_video-previous-button'),
          nextArrow: $('.vantage_video-next-button'),
          dots: true,

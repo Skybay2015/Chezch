@@ -8,6 +8,7 @@
          speed: 500,
          cssEase: 'linear',
          autoplaySpeed: 4000,
+         adaptiveHeight: true,
          prevArrow: $('.beauty_previous-button'),
          nextArrow: $('.beauty_next-button'),
          dots: true,
