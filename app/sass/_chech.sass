@@ -73,6 +73,7 @@
    svg 
       width: 30px
       height: 30px
+      margin-top: 4px
       transition: .3s ease-in-out
 
    &:hover 
@@ -88,7 +89,7 @@
    left: -25px
 
 .next-button 
-      right: -25px   
+   right: -25px   
 
 
 .slider-dots
@@ -103,7 +104,7 @@
          width: inherit
          outline: none
          border: none
-         height: 4px
+         height: 3px
          color: transparent
          background-color: #f9f9f9
 
@@ -112,4 +113,18 @@
          background-color: #fd4d4f
 
 
-   
+@media (max-width: 750px)
+   .subtitle 
+      font-size: 20px
+
+@media (max-width: 500px)
+   .subtitle 
+      font-size: 18px
+
+
+@media (max-width: 1131px)
+   .next-button
+      right: -10px
+
+   .previous-button
+      left: -10px

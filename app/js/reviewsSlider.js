@@ -1,7 +1,6 @@
 (function() {
    $(document).ready(function() {
       $('.reviews_slider').slick({
-         slidesToShow: 1,
          slidesToScroll: 1,
          autoPlay: true,
          autoplaySpeed: 2000,
@@ -10,6 +9,23 @@
          dots: true,
          appendDots: $('.reviews_main-container'),
          dotsClass: 'slider-dots',
+         rows: 2,
+         slidesPerRow: 3,
+         responsive: [
+            {
+               breakpoint: 894,
+               settings: {
+                  slidesPerRow: 2,
+
+               },
+            },
+            {
+               breakpoint: 668,
+               settings: {
+                  slidesPerRow: 1,
+               },
+            },
+         ],
       });
    });
 })();

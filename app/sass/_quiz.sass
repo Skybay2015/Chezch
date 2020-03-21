@@ -17,11 +17,12 @@
       padding-bottom: 2px
       color: #24ace3
       transition: .3s ease-in-out
+      font-size: 14px
 
    &_answer-item 
       display: flex
       align-items: center
-      margin-right: 29px
+      margin-right: 27px
       margin-bottom: 18px
       padding: 18px 87px 17px 31px
       transition: .3s ease-in-out
@@ -130,6 +131,7 @@
       margin-top: 33px
 
       &_title 
+         line-height: 30px
          font-family: $second_font
          color: #505050
          font-size: 24px
@@ -163,7 +165,6 @@
    font-family: $first_font
    font-size: 36px
    font-weight: 500
-
    
    &:after
       content: ''
@@ -171,25 +172,70 @@
       background-color: #505050
       height: 1px
       width: 67px
-      left: 47%
+      left: 50%
+      transform: translate(-50%, 0)
       bottom: 0
 
 .title:nth-of-type(even) 
    color: #fff
 
-   
-.selected 
-   box-shadow: 0 3px 18px 3px rgba(253, 105, 107, 0.14)
-   border: 1px solid #fdadae
-   transition: .3s ease-in-out
-   background-color: #fff
 
-      
-   .quiz_answer-item_icon 
-      fill: #fd4d4f
-      transition: .3s ease-in-out
 
-      .quiz_answer 
-         color: #777777
-         border-bottom: 1px solid rgba(253, 77, 79, 0.5)
-         transition: .3s ease-in-out
+@media (max-width: 910px)
+
+   .quiz_item 
+      padding: 51px 39px 40px 43px
+
+   .quiz_answer-item
+      padding-right: 0
+      max-width: 42%
+      width: 100%
+
+@media (max-width: 722px)
+
+   .title 
+      font-size: 30px
+
+   .quiz_title 
+      font-size: 20px
+
+   .quiz_answer-item
+      max-width: 37%
+      padding-right: 10px
+
+@media (max-width: 572px)
+   .quiz_answers-container
+      flex-wrap: nowrap
+      flex-direction: column
+
+   .quiz_answer-item
+      max-width: 90%
+
+   .quiz_btn
+      flex-direction: column
+
+      .btn_wrapper
+         margin-right: 0
+
+   .quiz_previous-question
+      margin-top: 25px
+
+@media (max-width: 425px)
+   .title 
+      font-size: 22px
+
+   .quiz_item
+      padding: 0
+      border: 0
+
+   .quiz_answer-item
+      max-width: 86%
+
+   .quiz_main-container 
+      box-shadow: 0
+      border: 0
+      padding: 0
+
+   .quiz_form_container_title 
+      font-size: 18px
+

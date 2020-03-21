@@ -8,9 +8,9 @@
 
 @font-face {
    font-family: 'Fira Sans Condensed';
-   src: url(../fonts/Fira_Sans_Condensed/FiraSansCondensed-Bold.ttf)
+   src: url(../fonts/Fira_Sans_Condensed/FiraSansCondensed-Medium.ttf)
       format('truetype');
-   font-weight: bold;
+   font-weight: 500;
    font-style: normal;
 }
 

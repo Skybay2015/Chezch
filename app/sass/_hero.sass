@@ -7,6 +7,7 @@
    &_top-content 
       display: flex
       justify-content: space-between
+      align-items: center
       font-family: $second_font 
 
       &_item 
@@ -25,8 +26,16 @@
       font-size: 14px
       line-height: 21px
 
+      
+
+
+     
+
+         
+
    &_social-network-container 
       margin-right: 26px
+      display: flex
 
 
    &_social-network 
@@ -78,7 +87,6 @@
       color: #10a0db
       font-size: 14px
       border-bottom: 1px solid rgb(253, 77, 79)
-      padding-bottom: 4px
       opacity: 0.5
       transition: .3s ease-in-out
 
@@ -122,23 +130,27 @@
 
    &_advantages-container
       display: flex
+      flex-wrap: wrap
+      padding-top: 37px 
 
-      &:first-of-type 
-         padding: 37px 17px 18px
-         border-bottom: 1px solid rgba(232, 232, 232, 0.1)
-
-      &:last-of-type 
-         padding: 18px 17px 0
+         
 
    &_advantages-item 
       display: flex
       align-items: center
-      flex-grow: 1
+      width: 100%
       max-width: 25%
       span 
          line-height: 21px
          margin-left: 18px
          color: #fff
+
+      &:nth-child(-n+4)
+         padding-bottom: 17px
+         border-bottom: 1px solid rgba(232, 232, 232, 0.1)
+
+      &:nth-child(n+4)
+         padding-top: 17px
 
 .btn_container
    z-index: 1
@@ -156,20 +168,20 @@
 
    &:after
       content: ''
-      width: 100%
+      width: 97%
       height: 100%
       box-shadow: 0 3px 27px 1px rgba(253, 105, 107, 0.52)
       border-radius: 14px  
       background-color: #aa3435
       position: absolute
-      left: 0
+      left: 5px
       bottom: -6px
       z-index: -1
 
 .btn
    position: relative
    box-shadow: inset 0 -1px 0 #fd6264
-   border-radius: 4px
+   border-radius: 4px 4px 8px 8px
    background-image: linear-gradient(to top, #fd4d4f 0%, #fd8687 100%)
    color: #ffffff
    font-family: $first_font
@@ -223,4 +235,113 @@
       
 
    
+@media (max-width: 1020px) 
+   .hero_info
+      max-width: 166px
+      &:nth-child(2)
+         max-width: 177px
+
+
+@media (max-width:970px)
+   .hero_social-network
+      margin-right: 10px
+
+      &:first-of-type 
+         margin-right: 5px
+
+@media (max-width: 750px)
+   .hero_top-content_item
+      &:nth-of-type(2)
+         flex-direction: column
+
+   .hero_social-network-container
+      margin-right: 0
+      margin-bottom: 17px
+
+   .hero 
+      .hero_title 
+         font-size: 40px
+
+      .hero_subtitle 
+         font-size: 20px
+
+      &_advantages-contaienr 
+         padding-top: 18px
+
+      &_advantages-item
+         max-width: 30%
+         padding-left: 17px
+
+         &:nth-child(-n+6)
+            padding-bottom: 17px
+            padding-top: 19px
+            border-bottom: 1px solid rgba(232, 232, 232, 0.1)
+
+
+@media (max-width: 640px)
+   .hero
+
+      .hero_top-content_item
+         &:nth-of-type(2)
+            flex-direction: column
+            display: none
+
+@media (max-width: 600px)
+
+   .hero
+       &_advantages-item
+         max-width: 46%
+         border-bottom: 1px solid rgba(232, 232, 232, 0.1)
+         padding-bottom: 17px
+
+
+
+@media (max-width: 517px)
+   .hero_top-content
+      flex-direction: column
+      align-items: flex-start
+
+   .hero_contacts-container 
+      text-align: left
+      margin-top: 29px
+      margin-right: 50px
+
+   .hero_logo 
+      margin-right: 17px
       
+
+   .hero
+      .hero_title 
+         margin-top: 41px
+         font-size: 36px
+         text-align: left
+
+      .hero_subtitle
+         font-size: 21px
+         text-align: left
+
+@media (max-width: 456px)
+   .hero
+      &_advantages-container
+         flex-wrap: nowrap
+         flex-direction: column
+
+      &_advantages-item
+         max-width: 100%
+
+         &:nth-child(-n+8)
+            border-bottom: 0
+            padding-top: 0
+            padding-left: 0
+            
+   .hero_br
+      display: none
+
+
+@media (max-width: 375px)
+   .hero
+      .hero_title
+         font-size: 24px
+
+      .hero_subtitle
+         font-size: 18px

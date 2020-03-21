@@ -58,10 +58,45 @@
             .on('click', function(e) {
                quiz.answer = questions[quiz.activeQuestion].answers[index];
 
-               unhighlightElement();
-               // Подсветить выбранный элемент
-               $(this).addClass('selected');
+               let { activeQuestion } = quiz;
+               const { answers } = quiz;
+
+               if (quiz.activeQuestion === 3) {
+                  quiz.finished = true;
+               }
+
+               if (quiz.answer) {
+                  answers.push(quiz.answer);
+                  quiz.answer = '';
+
+                  quiz.activeQuestion = ++activeQuestion;
+
+                  if (activeQuestion < 4) {
+                     $('.quiz_title').text(
+                        quiz.questions[activeQuestion].question,
+                     );
+                  }
+
+                  $('#quiz_progress_bar').css(
+                     'maxWidth',
+                     `${activeQuestion * 25}%`,
+                  );
+
+                  $('.quiz_number').text(`Вопрос ${activeQuestion} из 4`);
+                  $('#quiz_btn_prev').show();
+
+                  if (!quiz.finished) {
+                     renderQuestions(activeQuestion);
+                  } else {
+                     // Перейти к форме отправки
+                     $('#quiz_btn_next').hide();
+                     $('#quiz_btn_prev').hide();
+                     $('.quiz_question').hide();
+                     $('.quiz_form_container').show();
+                  }
+               }
             });
+         // Спрятать последний элемент при рендеринге
          $('.quiz_answer')
             .last()
             .parent()
@@ -69,49 +104,8 @@
       });
    });
 
-   $('#quiz_btn_next').on('click', () => {
-      let { activeQuestion } = quiz;
-      const { answers } = quiz;
-
-      unhighlightElement();
-      console.log(quiz.answers);
-
-      if (quiz.activeQuestion === 3) {
-         quiz.finished = true;
-      }
-
-      if (quiz.answer) {
-         answers.push(quiz.answer);
-         quiz.answer = '';
-
-         quiz.activeQuestion = ++activeQuestion;
-
-         if (activeQuestion < 4) {
-            $('.quiz_title').text(quiz.questions[activeQuestion].question);
-         }
-
-         $('#quiz_progress_bar').css('maxWidth', `${activeQuestion * 25}%`);
-
-         $('.quiz_number').text(`Вопрос ${activeQuestion} из 4`);
-         $('#quiz_btn_prev').show();
-
-         if (!quiz.finished) {
-            renderQuestions(activeQuestion);
-         } else {
-            $('#quiz_btn_next').hide();
-            $('#quiz_btn_prev').hide();
-            $('.quiz_question').hide();
-            $('.quiz_form_container').show();
-         }
-      }
-   });
-
    $('#quiz_btn_prev').on('click', () => {
       let { activeQuestion } = quiz;
-
-      unhighlightElement();
-
-      console.log(quiz.answers);
 
       quiz.answer = '';
       quiz.answers.pop();
@@ -151,14 +145,6 @@
          });
       }
    });
-
-   function unhighlightElement() {
-      $('.quiz_answer').each(function() {
-         $(this)
-            .parent()
-            .removeClass('selected');
-      });
-   }
 
    function renderQuestions(activeQuestion) {
       $('.quiz_answer').each(function(index) {

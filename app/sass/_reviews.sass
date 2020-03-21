@@ -15,14 +15,23 @@
       margin: 34px 0
 
 
+
+   &_slide 
+      display: flex
+      flex-direction: column
+
+
    &_slide_photo-container 
       width: 166px
       height: 158px
       text-align: center
       border-radius: 50%
       border-top: 1px solid #fd4d4f
-      padding: 9px
+      padding: 11px
       margin-right: 23px
+
+      @media (max-width: 600px)
+         margin-right: 0
 
    &_slide_photo 
       position: relative
@@ -44,17 +53,25 @@
    &_slide_container 
       display: flex
       margin-bottom: 31px
+      flex-direction: column
       
       &:nth-of-type(2n) 
          margin-bottom: 0
 
    &_slide_item 
-      display: flex
+      
       flex-grow: 1
-      align-items: center
-      justify-content: center
+      margin-bottom: 24px
       opacity: .6
       transition: .3s ease-in-out
+
+      a 
+         display: flex
+         align-items: center
+         justify-content: center
+
+         @media (max-width: 600px)
+            flex-direction: column
 
       &:hover 
          opacity: 1
@@ -72,6 +89,9 @@
       border-bottom: 1px solid rgb(253, 77, 79)
       line-height: 21px
       transition: .3s ease-in-out
+
+   &_previous-button, &_next-button
+      top: 32%
 
 .second_subtitle
       position: relative
@@ -91,5 +111,6 @@
          background-color: #10a0db
          height: 1px
          width: 67px
-         left: 47%
+         left: 50%
+         transform: translate(-50%, 0)
          bottom: 0

@@ -56,7 +56,7 @@
    &_img 
       position: absolute
       bottom: 0
-      right: 25px
+      right: 2px
       width: 442px
       height: 526px
 
@@ -64,14 +64,15 @@
       position: relative
 
       .previous-button
-         left: 36%
+         left: 28%
 
       .next-button 
-         right: 36%
+         right: 28%
+
 
    &_video-item
       position: relative
-      margin: 34px 48px 0
+      margin: 34px 0 0
       height: 319px
 
       img 
@@ -94,8 +95,9 @@
       
       &_playpause_container
          position: absolute
-         top: 27%
-         left: 39%
+         top: 50%
+         left: 50%
+         transform: translate(-50%, -50%)
          width: 93px
          height: 92px
          padding: 10px 
@@ -144,7 +146,9 @@
 
       .vantage_photo-item
          display: flex
-         justify-content: space-between
+         justify-content: center
+
+
 
    &_photo-item 
       img 
@@ -163,3 +167,150 @@
    .slick-current
       .vantage_video-item_screen
          display: none
+
+@media (max-width: 1096px)
+   .vantage_img
+      right: 0
+      bottom: -15px
+      width: 300px
+      height: 358px
+
+@media (max-width: 920px)
+    .vantage_img
+      width: 213px
+      height: 269px
+
+@media (max-width: 844px)
+   .vantage_img
+      display: none
+
+   .vantage_main-container
+      padding-left: 0
+
+   .vantage_container 
+      margin: 0 auto
+
+@media (max-width: 654px)
+   .vantage_container
+      justify-content: center
+
+   .vantage_item
+      max-width: 256px
+      margin-right: 0
+
+   .vantage_photo-item
+      img 
+         width: 131px
+         height: 135px
+
+   .vantage_main-photo-container 
+      .previous-button, .next-button     
+         top: 22%
+
+@media (max-width: 425px)
+   .vantage_main-container
+      background: #fff
+
+   .vantage_item
+      border: 1px solid #f0f0f0
+      margin-top: 19px
+
+
+@media (max-width: 1352px)
+   .vantage_main-video-container 
+      .previous-button
+         left: 27%
+
+      .next-button
+         right: 27%     
+
+@media (max-width: 1240px)
+   .vantage_main-video-container 
+      .previous-button
+         left: 25%
+
+      .next-button
+         right: 25% 
+
+@media (max-width: 1150px)
+   .vantage_main-video-container 
+      .previous-button
+         left: 23%
+
+      .next-button
+         right: 23% 
+
+@media (max-width: 1060px)
+   .vantage_main-video-container 
+      .previous-button
+         left: 21%
+
+      .next-button
+         right: 21% 
+
+@media (max-width: 986px)
+   .vantage_main-video-container 
+      .previous-button
+         left: 19%
+
+      .next-button
+         right: 19% 
+
+
+@media (max-width: 916px)
+   .vantage_main-video-container 
+      .previous-button
+         left: 16%
+
+      .next-button
+         right: 16%    
+
+
+@media (max-width: 834px)
+   .vantage_main-video-container 
+      .previous-button
+         left: 13%
+
+      .next-button
+         right: 13% 
+
+@media (max-width: 766px)
+   .vantage_main-video-container 
+      .previous-button
+         left: 9%
+
+      .next-button
+         right: 9% 
+
+@media (max-width: 700px)
+   .vantage_main-video-container 
+      .previous-button
+         left: 6%
+
+      .next-button
+         right: 6% 
+
+
+@media (max-width: 650px)
+   .vantage_main-video-container 
+      .previous-button
+         left: 2%
+
+      .next-button
+         right: 2% 
+
+@media (max-width: 590px)
+   .vantage_main-video-container 
+      .previous-button
+         left: 0
+
+      .next-button
+         right: 0 
+
+@media (max-width: 425px)
+   .vantage_main-photo-container 
+      .previous-button, .next-button     
+         top: 22%
+
+   .vantage_video-item
+      height: 197px

@@ -31,7 +31,7 @@
          border: 1px solid #24abe2
          max-width: 291px
          
-
+  
 
    &_item
       display: flex
@@ -47,6 +47,7 @@
 
       &:first-of-type
          align-items: flex-start
+         line-height: 21px
 
          img 
             margin-right: 29px
@@ -54,13 +55,11 @@
       &:nth-child(2n)
          font-family: $second_font
          font-size: 14px
+         line-height: 21px
 
       &:nth-child(4n)
          border-bottom: none
 
-      &:nth-of-type(7)
-         padding-top: 43px
-         padding-bottom: 43px
 
       &_info 
          display: flex
@@ -100,6 +99,11 @@
       font-family: $second_font
       color: #7a7a7a
 
+   &_info
+      padding-top: 43px
+      padding-bottom: 43px
+
+
    &_social-networks_container
       text-align: center
       margin-top: 35px
@@ -120,6 +124,7 @@
          svg
             width: 35px
 
+
       &:first-of-type 
          margin-right: 17px
          svg
@@ -132,6 +137,8 @@
 
    .btn_wrapper, .btn  
       width: 100%
+
+    
 
 
 .form_input_container
@@ -183,14 +190,14 @@
          text-decoration: underline
 
 .go_up
-   position: absolute
+   position: fixed
    display: flex
    flex-direction: column
    align-items: center
    opacity: .5
    transition: .3s ease-in-out
-   right: 0
-   bottom: -23px
+   right: 15px
+   bottom: 10px
    text-decoration: none
    color: #74929e
    text-transform: uppercase
@@ -205,3 +212,29 @@
       opacity: 1
       transition: .3s ease-in-out
 
+
+@media (max-width:888px)
+   .contacts 
+
+      &_chech
+         padding-bottom: 48px
+
+         &_adr
+            padding-bottom: 44px
+   
+
+   .contacts_container:not(:nth-child(2))
+      max-width: 264px
+      
+   .contacts_container:nth-child(2)
+      order: 3
+
+   .contacts_main-container
+      flex-wrap: wrap
+
+
+@media (max-width:570px)
+
+   .contacts_container:nth-child(-n+3)
+      max-width: 300px
+      margin-right: 0
