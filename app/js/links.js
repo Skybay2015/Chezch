@@ -4,6 +4,7 @@
          $('.header-item').each(function() {
             $(this).removeClass('header-item-selected');
          });
+         $('.header_main_container').addClass('header_main_container_close')
          $(this).addClass('header-item-selected');
       });
    });
