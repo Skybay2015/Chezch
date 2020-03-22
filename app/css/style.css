@@ -454,7 +454,7 @@
 
 .vantage_video-item { position: relative; }
 
-.vantage_video-item_video { display: block; margin: 0 auto; height: 100%; }
+.vantage_video-item_video { display: block; margin: 0 auto; height: 400px; }
 
 .vantage_video-item_playpause_container { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 93px; height: 92px; padding: 10px; border-radius: 50%; }
 
@@ -474,7 +474,7 @@
 
 .vantage_photo-slider .vantage_photo-item { display: flex; justify-content: center; }
 
-.vantage_photo-item img { border: 1px solid transparent; border-radius: 4px; transition: .3s ease-in-out; }
+.vantage_photo-item img { border: 1px solid transparent; border-radius: 4px; width: 165px; height: 170px; transition: .3s ease-in-out; }
 
 .vantage_photo-item img:hover { border: 1px solid #fd4d4f; transition: .3s ease-in-out; }
 

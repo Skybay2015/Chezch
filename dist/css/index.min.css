@@ -162,7 +162,7 @@ table{border-collapse:collapse;border-spacing:0}.slick-slider{position:relative;
 .vantage_item_info{color:#7a7a7a;font-family:"Raleway";font-size:14px;line-height:21px}
 .vantage_img{position:absolute;bottom:0;right:2px;width:442px;height:526px}.vantage_main-video-container{position:relative}
 .vantage_main-video-container .previous-button{left:28%}.vantage_main-video-container .next-button{right:28%}
-.vantage_video-item{position:relative}.vantage_video-item_video{display:block;margin:0 auto;height:100%}
+.vantage_video-item{position:relative}.vantage_video-item_video{display:block;margin:0 auto;height:400px}
 .vantage_video-item_playpause_container{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:93px;height:92px;padding:10px;border-radius:50%}
 .vantage_video-item_playpause_container:before,.vantage_video-item_playpause_container:after{content:'';position:absolute;border:1px solid #fd4d4f;left:-10px;right:-10px;top:-10px;bottom:-10px;border-radius:50%;animation:pulse 7s linear infinite;opacity:0;z-index:-1}
 .vantage_video-item_playpause_container:after{animation-delay:5s}.vantage_video-item_playpause_wrapper{display:flex;justify-content:center;align-items:center;border-radius:50%;width:72px;height:71px;margin:10px auto 0;background:linear-gradient(to top,#fd4d4f 0,#fd8687 100%)}
@@ -170,7 +170,7 @@ table{border-collapse:collapse;border-spacing:0}.slick-slider{position:relative;
 .vantage_video-item_playpause_elem{width:0;height:0;border-style:solid;border-width:9.5px 0 9.5px 12px;border-color:transparent transparent transparent #fff}
 .vantage_main-photo-container{position:relative;margin-top:42px;margin-bottom:34px}
 .vantage_main-photo-container .previous-button,.vantage_main-photo-container .next-button{top:28%}
-.vantage_photo-slider .vantage_photo-item{display:flex;justify-content:center}.vantage_photo-item img{border:1px solid transparent;border-radius:4px;transition:.3s ease-in-out}
+.vantage_photo-slider .vantage_photo-item{display:flex;justify-content:center}.vantage_photo-item img{border:1px solid transparent;border-radius:4px;width:165px;height:170px;transition:.3s ease-in-out}
 .vantage_photo-item img:hover{border:1px solid #fd4d4f;transition:.3s ease-in-out}
 .vantage .subtitle{color:#505050;margin-top:16px}@media(max-width:1096px){.vantage_img{right:0;bottom:-15px;width:300px;height:358px}
 }@media(max-width:920px){.vantage_img{width:213px;height:269px}}@media(max-width:844px){.vantage_img{display:none}
