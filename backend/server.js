@@ -1,5 +1,6 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
+const cors = requier('cors')
 
 const app = express();
 
@@ -13,15 +14,10 @@ const transporter = nodemailer.createTransport({
    },
 });
 
-const allowCrossDomain = function(req, res, next) {
-   res.header('Access-Control-Allow-Origin', '*');
-   res.header('Access-Control-Allow-Headers', '*');
-   next();
-};
 
 app.use(express.json());
 
-app.use(allowCrossDomain);
+app.use(cors());
 
 app.use(express.urlencoded({ extended: false }));
 
@@ -50,6 +46,7 @@ app.post('/quiz', (req, res) => {
 });
 
 app.post('/modal', (req, res) => {
+   res.json({message: 'workwrqkr'})
    let formName;
    let text = 'Имя';
 
