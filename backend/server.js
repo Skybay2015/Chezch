@@ -1,6 +1,6 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
-const cors = requier('cors')
+const cors = require('cors')
 
 const app = express();
 
@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.post('/quiz', (req, res) => {
    const htmlBody = `<h2>Заказан обратний звонок с формы: Второй блок</h2>
-   <p>Ответы: ${req.body['answers[]'].join(', ')}</p>
+   <p>Ответы: ${req.body.answers.join(', ')}</p>
    <p>Номер телефона: ${req.body.phone}</p>
    `;
 
@@ -46,7 +46,7 @@ app.post('/quiz', (req, res) => {
 });
 
 app.post('/modal', (req, res) => {
-   res.json({message: 'workwrqkr'})
+
    let formName;
    let text = 'Имя';
 
@@ -93,4 +93,4 @@ app.post('/modal', (req, res) => {
    });
 });
 
-app.listen(8000, () => console.log('Server is working'));
+app.listen(3000, () => console.log('Server is working'));
