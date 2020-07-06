@@ -11,6 +11,7 @@
    $('.confidential').each(function() {
       $(this).on('click', function() {
          $('#confidential_modal').css('display', 'flex');
+         $('body').css('overflow', 'hidden');
       });
    });
 
@@ -30,30 +31,6 @@
       $(this).on('click', function() {
          $('#price_modal').css('display', 'flex');
          $('body').css('overflow', 'hidden');
-      });
-   });
-
-   $('.modal_form').each(function() {
-      $(this).submit(function(e) {
-         e.preventDefault();
-         const formName = $(this).attr('name');
-         const phone = $(this)[0].phone.value;
-         const name = $(this)[0].name.value;
-         const agree = $(this)[0].agree.checked;
-         const actionUrl = e.currentTarget.action;
-
-         if (agree) {
-            $.ajax({
-               url: actionUrl,
-               type: 'post',
-               dataType: 'application/json',
-               data: {
-                  phone,
-                  name,
-                  formName,
-               },
-            });
-         }
       });
    });
 })();

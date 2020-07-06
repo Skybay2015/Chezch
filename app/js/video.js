@@ -8,9 +8,11 @@
 
          if (video.paused) {
             video.play();
+            video.setAttribute('controls', 'controls');
             playButton.css('display', 'none');
          } else {
             video.pause();
+            video.removeAttribute('controls');
             playButton.css('display', 'block');
          }
          video.onended = function() {

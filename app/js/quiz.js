@@ -16,9 +16,8 @@
             answers: {
                0: 'Иммиграция',
                1: 'Для работы',
-               2: 'Для учебы',
-               3: 'Для бизнеса',
-               4: 'Другое',
+               2: 'Для бизнеса',
+               3: 'Другое',
             },
          },
          3: {
@@ -59,14 +58,13 @@
                quiz.answer = questions[quiz.activeQuestion].answers[index];
 
                let { activeQuestion } = quiz;
-               const { answers } = quiz;
 
                if (quiz.activeQuestion === 3) {
                   quiz.finished = true;
                }
 
                if (quiz.answer) {
-                  answers.push(quiz.answer);
+                  quiz.answers.push(quiz.answer);
                   quiz.answer = '';
 
                   quiz.activeQuestion = ++activeQuestion;
@@ -93,14 +91,10 @@
                      $('#quiz_btn_prev').hide();
                      $('.quiz_question').hide();
                      $('.quiz_form_container').show();
+                     $('#quizAnswers')[0].value = quiz.answers.join(', ');
                   }
                }
             });
-         // Спрятать последний элемент при рендеринге
-         $('.quiz_answer')
-            .last()
-            .parent()
-            .hide();
       });
    });
 
@@ -133,39 +127,9 @@
       renderQuestions(activeQuestion);
    });
 
-   $('#quiz_form').submit(function(e) {
-      e.preventDefault();
-      const phone = $('#quiz_form')[0].phone.value;
-      const agree = $('#quiz_form')[0].agreeQuiz.checked;
-      const actionUrl = e.currentTarget.action;
-
-      if (agree) {
-         $.ajax({
-            url: actionUrl,
-            type: 'post',
-            dataType: 'application/json',
-            data: {
-               answers: quiz.answers,
-               phone,
-            },
-         });
-      }
-   });
-
    function renderQuestions(activeQuestion) {
       $('.quiz_answer').each(function(index) {
          $(this).text(quiz.questions[activeQuestion].answers[index]);
-         if (activeQuestion === 2) {
-            $('.quiz_answer')
-               .last()
-               .parent()
-               .show();
-         } else {
-            $('.quiz_answer')
-               .last()
-               .parent()
-               .hide();
-         }
       });
    }
 })();

@@ -38,7 +38,7 @@ gulp.task(
          .pipe(rename({ suffix: '.min' }))
          .pipe(
             uglifyCss({
-               maxLineLen: 80,
+               maxLineLen: 1000,
             }),
          )
          .pipe(gulp.dest('./dist/css'))

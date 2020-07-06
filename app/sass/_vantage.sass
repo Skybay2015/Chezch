@@ -72,6 +72,11 @@
          right: 28%
 
 
+   &_video-slide
+      width: 481px
+      opacity: 0.3
+
+
    &_video-item
       position: relative
 
@@ -117,6 +122,9 @@
          margin: 10px auto 0
          background: linear-gradient(to top,#fd4d4f 0,#fd8687 100%)
 
+         &:hover 
+            background-image: linear-gradient(to top, #ff4f51 0%, #ffa6a7 100%)
+
 
       &_playpause 
          
@@ -149,13 +157,11 @@
          justify-content: center
 
 
-
-
    &_photo-item 
       img 
          border: 1px solid transparent
          border-radius: 4px
-         width: 165px
+         width: 166px
          height: 170px
          transition: .3s ease-in-out
 
@@ -168,6 +174,9 @@
    .subtitle 
       color: #505050
       margin-top: 16px
+
+.slick-current.vantage_video-slide
+      opacity: 1
 
 @media (max-width: 1096px)
    .vantage_img
@@ -317,3 +326,6 @@
 
    .vantage_video-item
       height: 197px
+
+      &_video 
+         height: 100%
